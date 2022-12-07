@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 
-function Header() {
+function Header({item, setItem}) {
 
     const [form, setForm] = useState({ content: "" })
-    const [item, setItem] = useState("")
+
 
 
     // FORM
@@ -23,11 +23,6 @@ function Header() {
         setForm({ [e.target.name]: e.target.value })
     }
 
-
-    // console.log("item verileri :", item)
-    // console.log("form verileri :", form)
-    // console.log("form.content verileri :", form.content)
-
     return (
         <header >
             <div className='container'>
@@ -41,7 +36,7 @@ function Header() {
                         <div className='form-floating' >
                             <input
                                 className="form-control form-input"
-                                placeholder="Search"
+                                placeholder="Search Location"
                                 id="floatingInput"
                                 name='content'
                                 value={form.content}
@@ -49,7 +44,7 @@ function Header() {
                                 autoFocus
 
                             />
-                            <label htmlFor="floatingInput" className='text-primary'>Bir şeyler yaz</label>
+                            <label htmlFor="floatingInput" className='text-primary'>Search Location</label>
                         </div>
 
                         <div>
