@@ -2,4 +2,38 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  background-color: #3e4b64;
+}
+
+form {
+  text-align: center;
+  /* display: flex; */
+  /* align-content: center; */
+  /* align-items: center; */
+  /* align-self: center; */
+  /* justify-content: center; */
+  /* justify-items: center; */
+  /* justify-self: center; */
+}
+
+.Search {
+  height: 55px;
+  margin-left: 15%;
+  /* border-radius: 50px; */
+  border-radius: 1.4em;
+}
+
+.form-input {
+  /* border-color: transparent; */
+  /* background-color: transparent; */
+  border-radius: 0.4em;
+  border-bottom-color: red;
+  color: white;
+}
+
+header{
+  height: 80px;
+  border-bottom-color: red;
+  background-color: orange;
 }
