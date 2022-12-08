@@ -25,10 +25,25 @@ function Section({ lat, lon, item }) {
                     {
                         current.name != undefined ?
                             <div className='current-weather'>
-                                <h4 className='text-white'>Current Weather Data</h4>
-                                <img src={current.weather[0].icon} alt="s" />
-                                <h1>{current.name}</h1>
-                                <h1>{current.main.temp} °C </h1>
+                                <h4 className=''>Current Weather Data</h4>
+                                {/* <h1 style={{float:"right"}}>{current.name}</h1> */}
+                                <h1 >{current.name}</h1>
+
+
+                                <div className="d-flex mt-3"  >
+                                    <img 
+                                    src={`http://openweathermap.org/img/wn/${current.weather[0].icon}.png`} 
+                                    alt="icon" width={60} height={60} />
+                                    <h1 className='ms-3'>{current.main.temp.toFixed()} °C </h1>
+
+                                    <div>
+                                        <h4 className='ms-5'>{current.weather[0].description}</h4>
+                                        <h4 className='ms-5'>Feel Like: {current.main.feels_like.toFixed()}</h4>
+                                    </div>
+
+                                </div>
+
+                                {/* <h1>{Math.floor(current.main.temp)} °C </h1> */}
                             </div>
                             : null
                     }
