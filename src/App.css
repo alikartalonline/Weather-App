@@ -8,13 +8,6 @@ body {
 
 form {
   text-align: center;
-  /* display: flex; */
-  /* align-content: center; */
-  /* align-items: center; */
-  /* align-self: center; */
-  /* justify-content: center; */
-  /* justify-items: center; */
-  /* justify-self: center; */
 }
 
 .Search {
@@ -32,8 +25,16 @@ form {
   color: white;
 }
 
-header{
+header {
   height: 80px;
   border-bottom-color: red;
   background-color: orange;
+}
+
+.current-weather {
+  border: 1px solid red;
+  width: 50%;
+  height: 250px;
+  border-radius: 0.5em;
+  padding: 15px;
 }
