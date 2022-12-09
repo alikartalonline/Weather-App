@@ -48,21 +48,21 @@ function Section({ lat, lon, item }) {
                                     <div>
                                         <h4 className='ms-5'>
                                             {current.weather[0].description.toUpperCase().slice(0, 1) + current.weather[0].description.toLowerCase().slice(1)}</h4>
-                                        <h5 className='ms-5'>Feel Like: {current.main.feels_like.toFixed()}°</h5>
+                                        <h5 className='ms-5 feel'>Feel Like {current.main.feels_like.toFixed()}°</h5>
                                     </div>
 
                                 </div>
 
                                 <ul className='d-flex'>
 
-                                    <li style={{ marginLeft: "-5%" }}>Wind <span className='footer-words'>
+                                    <li style={{ marginLeft: "-5%" }}>WIND <span className='footer-words'>
                                         {current.wind.speed.toFixed()} km/s
                                     </span>
                                     </li>
-                                    <li>Humidity <span>{current.main.humidity}%</span></li>
-                                    <li>Pressure <span className='footer-words'>{current.main.pressure} mb</span></li>
-                                    <li>main <span>{current.weather[0].main}</span></li>
-                                    <li>Visibility <span>{current.visibility / 1000} km</span></li>
+                                    <li>HUMIDITY <span>{current.main.humidity}%</span></li>
+                                    <li>PRESSURE <span className='footer-words'>{current.main.pressure} mb</span></li>
+                                    <li>MAIN <span>{current.weather[0].main}</span></li>
+                                    <li>VISIBILITY <span>{current.visibility / 1000} km</span></li>
                                 </ul>
                             </div>
                             : null

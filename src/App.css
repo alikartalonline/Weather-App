@@ -43,9 +43,22 @@ header {
 
 .current-weather li {
   list-style-type: none;
-  margin-top: 5%;
-  margin-left: 14%;
+  margin-top: 2%;
+  margin-left: 12%;
+  font-size: 15px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+.feel{
+  font-size: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.current-weather li span{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 600;
+}
+
 
 .footer-words {
   white-space: nowrap;
