@@ -5,7 +5,7 @@ import MapDetail from './MapDetail';
 export default function GoogleMapContent({lat, lon}) {
 
     const { isLoaded } = useLoadScript({
-        googleMapsApiKey: "AIzaSyB2sihK_Sh8aDegzx8hkJ7aK22wivzbar0",
+        googleMapsApiKey: process.env.REACT_APP_MAP_KEY,
     });
 
     if (!isLoaded) return <div>Loading...</div>;
