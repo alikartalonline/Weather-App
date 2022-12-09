@@ -17,15 +17,15 @@ function Homepage() {
     useEffect(() => {
         axios.get(`https://api.openweathermap.org/geo/1.0/direct?q=${item}&appid=${process.env.REACT_APP_API_KEY}`)
             .then(res => {
-                setLat(res.data[0].lat);
-                setLon(res.data[0].lon);
+                // setLat(res.data[0].lat);
+                setLat((res.data[0].lat))
+                setLon((res.data[0].lon));
                 console.log("lat :",lat)
                 console.log("lon :",lon)
             }).catch(err => {
                 console.log("error", err);
             })
     }, [item, lat, lon]);
-
 
     return (
         <div>

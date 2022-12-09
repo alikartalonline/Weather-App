@@ -39,9 +39,7 @@ header {
   padding: 15px;
   color: white;
   background-color: rgb(113, 146, 179);
-
 }
-
 
 .current-weather li {
   list-style-type: none;
@@ -49,6 +47,27 @@ header {
   margin-left: 14%;
 }
 
-.footer-words{
-white-space: nowrap;
+.footer-words {
+  white-space: nowrap;
+}
+
+.CWD {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.main-temp{
+  font-size: 60px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.main-temp-c{
+  font-size: 30px;
+  /* margin-left: 10px; */
+}
+
+.map-container{
+height: 100%;
+width: 100%;
 }
