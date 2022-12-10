@@ -17,6 +17,20 @@ function Section({ lat, lon, item }) {
     }, [item, lat, lon]);
 
 
+    const dates = new Date()
+    const options = { weekday: 'long' };
+    const trHour = (dates.getHours('tr-TR', current.timezone)); // 22
+    const dateTime = (dates.toLocaleString(current.timezone, 'tr-TR', { timeZone: 'UTC' }));
+    const dateString = (dates.toDateString(current.timezone));
+    const weekDay = (dates.toLocaleDateString('en-EN', options, current.timezone));
+    const Clock = (dates.toLocaleTimeString('tr-TR', current.timezone));
+
+    // console.log("tr date:", trHour); // 22
+    // console.log("Date and Time:",dateTime); // 10.12.2022 22:50:15
+    // console.log("Date String :",dateString); //  Sat Dec 10 2022
+    // console.log("Week Day :",weekDay); // Saturday
+    // console.log("Clock:",Clock); // 22:50:15
+
     return (
         <section>
             <div className='container mt-5'>
@@ -71,6 +85,8 @@ function Section({ lat, lon, item }) {
                     <div className='col-4'>
                         <GoogleMapContent lat={lat} lon={lon} />
                     </div>
+
+
 
                 </div>
             </div>
