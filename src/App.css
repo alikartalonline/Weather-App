@@ -10,39 +10,30 @@ form {
   text-align: center;
 }
 
-/* .Search {
-  height: 55px;
-  margin-left: 15%;
-  border-radius: 50px;
-  border-radius: 1.4em;
-} */
-
 form {
-  width: 30%;
+  width: 35%;
 }
 
 .form-input {
-  border-radius: 0.4em;
+  border-radius: 1.4em;
   color: white;
   font-size: 18px;
 }
 
-.form-input:hover{
- border-color: black;
- box-shadow: 20px 8px 50px #73e5e5,
- -10px -5px 50px #4c7fcc;
+.form-input:hover {
+  border-color: black;
+  box-shadow: 20px 8px 50px #73e5e5, -10px -5px 50px #4c7fcc;
 }
 
-
 .searchLogoButton {
-  border-radius: 0.4em;
+  border-radius: 1.4em;
   background-color: white;
 }
 
 header {
   height: 80px;
-  border-bottom-color: red;
-  background-color: orange;
+  background-color: #78d1f2;
+  background-image: linear-gradient(45deg, #77c4e3 30%, #dfe160 90%);
 }
 
 .current-weather {
@@ -98,4 +89,23 @@ header {
 .map-container {
   height: 100%;
   width: 100%;
+}
+
+.headerInfo {
+  white-space: nowrap;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif,
+  Helvetica, sans-serif;
+}
+
+/* .Clck {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif,
+    Helvetica, sans-serif;
+} */
+
+.headerInfo span {
+  font-weight: 550;
+}
+
+.date-time-prop{
+margin-left: 30px;
 }

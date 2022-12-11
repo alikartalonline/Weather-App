@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import GoogleMapContent from './GoogleMapContent';
 
-function Section({ lat, lon, item }) {
+function Section({ lat, lon, item,setDateTime }) {
 
     const [current, setCurrent] = useState([])
 
@@ -11,6 +11,7 @@ function Section({ lat, lon, item }) {
         axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${process.env.REACT_APP_API_KEY}&units=metric`)
             .then(res => {
                 setCurrent(res.data)
+                setDateTime(res.data.timezone)
             }).catch(err => {
                 console.log("error", err);
             })
@@ -19,7 +20,7 @@ function Section({ lat, lon, item }) {
 
     const dates = new Date()
     const options = { weekday: 'long' };
-    const trHour = (dates.getHours('tr-TR', current.timezone)); // 22
+    const trHour = (dates.getHours('tr-TR', current.timezone)); 
     const dateTime = (dates.toLocaleString(current.timezone, 'tr-TR', { timeZone: 'UTC' }));
     const dateString = (dates.toDateString(current.timezone));
     const weekDay = (dates.toLocaleDateString('en-EN', options, current.timezone));

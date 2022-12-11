@@ -7,9 +7,10 @@ import Section from './Section';
 
 function Homepage() {
 
-    const [lat, setLat] = useState("");
+    const [lat, setLat] = useState(""); 
     const [lon, setLon] = useState("");
     const [item, setItem] = useState(""); // Location 
+    const [dateTime, setDateTime] = useState(""); 
 
     // FIND "LAT" - "LOT" 
     useEffect(() => {
@@ -26,8 +27,8 @@ function Homepage() {
 
     return (
         <div>
-            <Header item={item} setItem={setItem} />
-            <Section lat={lat} lon={lon} item={item} />
+            <Header item={item} setItem={setItem} dateTime={dateTime} />
+            <Section lat={lat} lon={lon} item={item} setDateTime={setDateTime} />
         </div>
     )
 };
