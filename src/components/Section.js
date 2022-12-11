@@ -34,7 +34,7 @@ function Section({ lat, lon, item,setDateTime }) {
 
     return (
         <section>
-            <div className='container mt-5'>
+            <div className='container mt-4'>
                 <div className='row'>
 
                     {
