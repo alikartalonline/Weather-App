@@ -4,6 +4,7 @@ import axios from 'axios';
 // COMPONENTS
 import Header from './Header';
 import Section from './Section';
+import Nav from './Nav';
 
 function Homepage() {
 
@@ -18,8 +19,8 @@ function Homepage() {
             .then(res => {
                 setLat((res.data[0].lat))
                 setLon((res.data[0].lon));
-                // console.log("lat :",lat)
-                // console.log("lon :",lon)
+                console.log("lat :",lat)
+                console.log("lon :",lon)
             }).catch(err => {
                 console.log("error", err);
             })
@@ -28,6 +29,7 @@ function Homepage() {
     return (
         <div>
             <Header item={item} setItem={setItem} dateTime={dateTime} />
+            <Nav />
             <Section lat={lat} lon={lon} item={item} setDateTime={setDateTime} />
         </div>
     )

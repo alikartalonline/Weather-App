@@ -83,7 +83,6 @@ header {
 
 .main-temp-c {
   font-size: 30px;
-  /* margin-left: 10px; */
 }
 
 .map-container {
@@ -97,11 +96,6 @@ header {
   Helvetica, sans-serif;
 }
 
-/* .Clck {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif,
-    Helvetica, sans-serif;
-} */
-
 .headerInfo span {
   font-weight: 550;
 }
@@ -109,3 +103,50 @@ header {
 .date-time-prop{
 margin-left: 30px;
 }
+
+nav{
+  background: rgba(118, 128, 144, 0.5);  /* sondaki 0.5 opacity değeri oluyor */
+  height:40px;
+  color: #ffff;
+}
+
+.nav-border{
+  justify-content: center;
+  height: 40px;
+}
+
+.istanbul:hover{
+  color: rgb(87, 147, 236);
+  cursor: pointer;
+  background-color: rgb(83, 93, 100);
+  font-size: 19px;
+  font-weight: 550;
+}
+
+.ankara:hover{
+  color: rgb(255, 211, 54);
+  cursor: pointer;
+  background-color: rgb(83, 93, 100);
+  font-size: 19px;
+  font-weight: 550;
+}
+
+.izmir:hover{
+  color: rgb(79, 230, 90);
+  cursor: pointer;
+  background-color: rgb(83, 93, 100);
+  font-size: 19px;
+  font-weight: 550;
+}
+
+.nav-title{
+  /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.9em;
+}
+
+
+
+
+
+
