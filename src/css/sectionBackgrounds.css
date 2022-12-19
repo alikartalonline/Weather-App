@@ -1,0 +1,100 @@
+.bckgrnd {
+  background-image: url("../../public/gif/thunderstorm2.gif");
+  background-repeat: no-repeat;
+  /* background-repeat: round; */
+  background-size: cover;
+  /* background-position: center; */
+  /* background-origin: border-box; */
+  /* background-attachment: fixed; */
+}
+
+.clearSky {
+  background-image: url("../../public/gif/clearSky.gif");
+  background-repeat: no-repeat;
+  background-repeat: round;
+  background-size: cover;
+}
+
+.nightclearSky {
+  background-image: url("../../public/gif/nightclearSky.gif");
+  background-repeat: round;
+  background-size: cover;
+}
+
+.mist2 {
+  background-image: url("../../public/gif/mist2.gif");
+  background-repeat: no-repeat;
+  background-repeat: round;
+}
+
+.mist {
+  background-image: url("../../public/gif/mist.gif");
+  background-repeat: no-repeat;
+  background-repeat: round;
+}
+
+.fewClouds {
+  background-image: url("../../public/gif/FewClouds.gif");
+  background-repeat: no-repeat;
+  background-repeat: round;
+}
+
+.brokenClouds {
+  background-image: url("../../public/gif/BrokenClouds.gif");
+  background-repeat: no-repeat;
+  background-repeat: round;
+}
+
+.nightThunderstorm {
+  background-image: url("../../public/gif/nightThunderstorm.gif");
+  background-repeat: no-repeat;
+  background-repeat: round;
+}
+
+.rain {
+  background-image: url("../../public/gif/Rain.gif");
+  background-repeat: no-repeat;
+  background-repeat: round;
+}
+
+.nightRain {
+  background-image: url("../../public/gif/NightRain.gif");
+  background-repeat: no-repeat;
+  background-repeat: round;
+}
+
+.nightShowerRain {
+  background-image: url("../../public/gif/NightShowerRain.gif");
+  background-repeat: no-repeat;
+  background-repeat: round;
+}
+
+.scatteredClouds {
+  background-image: url("../../public/gif/ScatteredClouds.gif");
+  background-repeat: no-repeat;
+  background-repeat: round;
+}
+
+.showerRain {
+  background-image: url("../../public/gif/ShowerRain.gif");
+  background-repeat: no-repeat;
+  background-repeat: round;
+}
+
+.SNOW {
+  background-image: url("../../public/gif/SNOW.gif");
+  background-repeat: no-repeat;
+  background-repeat: round;
+}
+
+.nightSNOW {
+  background-image: url("../../public/gif/nightSNOW.gif");
+  background-repeat: no-repeat;
+  background-repeat: round;
+}
+
+.thunderstorm {
+  background-image: url("../../public/gif/thunderstorm.gif");
+  background-repeat: no-repeat;
+  background-repeat: round;
+}
