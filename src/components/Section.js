@@ -20,16 +20,16 @@ function Section({ lat, lon, item,setDateTime }) {
             }).catch(err => {
                 console.log("error", err);
             })
-    }, [item, lat, lon]);
+    }, [item, lat, lon, setDateTime]);
 
 
     const dates = new Date()
-    const options = { weekday: 'long' };
     const trHour = (dates.getHours('tr-TR', current.timezone)); 
-    const dateTime = (dates.toLocaleString(current.timezone, 'tr-TR', { timeZone: 'UTC' }));
-    const dateString = (dates.toDateString(current.timezone));
-    const weekDay = (dates.toLocaleDateString('en-EN', options, current.timezone));
-    const Clock = (dates.toLocaleTimeString('tr-TR', current.timezone));
+    // const options = { weekday: 'long' };
+    // const dateTime = (dates.toLocaleString(current.timezone, 'tr-TR', { timeZone: 'UTC' }));
+    // const dateString = (dates.toDateString(current.timezone));
+    // const weekDay = (dates.toLocaleDateString('en-EN', options, current.timezone));
+    // const Clock = (dates.toLocaleTimeString('tr-TR', current.timezone));
 
     // console.log("tr date:", trHour); // 22
     // console.log("Date and Time:",dateTime); // 10.12.2022 22:50:15
@@ -37,7 +37,13 @@ function Section({ lat, lon, item,setDateTime }) {
     // console.log("Week Day :",weekDay); // Saturday
     // console.log("Clock:",Clock); // 22:50:15
 
-    const weatherStatus = current.weather[0].description;
+    const weatherStatus = () => {
+        if(current.name !== undefined){
+            return current.weather[0].description
+        } else {
+            return undefined
+        }
+    };
 
     return (
         <section>
@@ -48,24 +54,21 @@ function Section({ lat, lon, item,setDateTime }) {
                         current.name !== undefined ?
                             // <div className='current-weather bckgrnd col-8'>
                             <div className={
-                                ((weatherStatus === "clear sky") && (trHour >= 8 && trHour <= 18)) ? "current-weather bckgrnd col-8" : 
-                                ((weatherStatus === "clear sky") && (trHour < 8 && trHour > 18)) ? "current-weather nightclearSky col-8" : 
-                                ((weatherStatus === "few clouds") && (trHour >= 8 && trHour <= 18))  ? "current-weather fewClouds col-8" :
-                                ((weatherStatus === "few clouds") && (trHour < 8 && trHour > 18))  ? "current-weather BrokenClouds col-8" : 
-                                weatherStatus === "scattered clouds"  ? "current-weather scatteredClouds col-8" :
-                                weatherStatus === "broken clouds"  ? "current-weather brokenClouds col-8" :
-                                ((weatherStatus === "shower rain") && (trHour >= 8 && trHour <= 18)) ? "current-weather showerRain col-8" :
-                                ((weatherStatus === "shower rain") && (trHour < 8 && trHour > 18)) ? "current-weather nightShowerRain col-8" :
-                                ((weatherStatus === "rain") && (trHour >= 8 && trHour <= 18)) ? "current-weather rain col-8" :
-                                ((weatherStatus === "rain") && (trHour < 8 && trHour > 18)) ? "current-weather nightRain col-8" :
-                                ((weatherStatus === "mist") && (trHour >= 8 && trHour <= 18)) ? "current-weather mist col-8" :
-                                ((weatherStatus === "mist") && (trHour < 8 && trHour > 18)) ? "current-weather mist2 col-8" :
-                                ((weatherStatus === "snow") && (trHour >= 8 && trHour <= 18)) ? "current-weather SNOW col-8" :
-                                ((weatherStatus === "snow") && (trHour < 8 && trHour > 18)) ? "current-weather nightSNOW col-8" :
-                                weatherStatus === "thunderstorm"  ? "current-weather thunderstorm col-8" : null
-
-
-
+                                ((weatherStatus() === "clear sky") && (trHour >= 8 && trHour <= 18)) ? "current-weather bckgrnd col-8" : 
+                                ((weatherStatus() === "clear sky") && (trHour < 8 && trHour > 18)) ? "current-weather nightclearSky col-8" : 
+                                ((weatherStatus() === "few clouds") && (trHour >= 8 && trHour <= 18))  ? "current-weather fewClouds col-8" :
+                                ((weatherStatus() === "few clouds") && (trHour < 8 && trHour > 18))  ? "current-weather BrokenClouds col-8" : 
+                                weatherStatus() === "scattered clouds"  ? "current-weather scatteredClouds col-8" :
+                                weatherStatus() === "broken clouds"  ? "current-weather brokenClouds col-8" :
+                                ((weatherStatus() === "shower rain") && (trHour >= 8 && trHour <= 18)) ? "current-weather showerRain col-8" :
+                                ((weatherStatus() === "shower rain") && (trHour < 8 && trHour > 18)) ? "current-weather nightShowerRain col-8" :
+                                ((weatherStatus() === "rain") && (trHour >= 8 && trHour <= 18)) ? "current-weather rain col-8" :
+                                ((weatherStatus() === "rain") && (trHour < 8 && trHour > 18)) ? "current-weather nightRain col-8" :
+                                ((weatherStatus() === "mist") && (trHour >= 8 && trHour <= 18)) ? "current-weather mist col-8" :
+                                ((weatherStatus() === "mist") && (trHour < 8 && trHour > 18)) ? "current-weather mist2 col-8" :
+                                ((weatherStatus() === "snow") && (trHour >= 8 && trHour <= 18)) ? "current-weather SNOW col-8" :
+                                ((weatherStatus() === "snow") && (trHour < 8 && trHour > 18)) ? "current-weather nightSNOW col-8" :
+                                weatherStatus() === "thunderstorm"  ? "current-weather thunderstorm col-8" : undefined
                                 }
                                 >
 
@@ -117,8 +120,6 @@ function Section({ lat, lon, item,setDateTime }) {
 
 
 <div className='col-12'>
-    <img src="assets/set2.gif" alt=""/>
-    <img src="assets/3.gif" alt="" height={100}/>
 
 </div>
 

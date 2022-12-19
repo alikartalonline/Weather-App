@@ -1,13 +1,3 @@
-.bckgrnd {
-  background-image: url("../../public/gif/thunderstorm2.gif");
-  background-repeat: no-repeat;
-  /* background-repeat: round; */
-  background-size: cover;
-  /* background-position: center; */
-  /* background-origin: border-box; */
-  /* background-attachment: fixed; */
-}
-
 .clearSky {
   background-image: url("../../public/gif/clearSky.gif");
   background-repeat: no-repeat;
@@ -98,3 +88,7 @@
   background-repeat: no-repeat;
   background-repeat: round;
 }
+
+
+
+

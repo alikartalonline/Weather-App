@@ -8,9 +8,9 @@ import Nav from './Nav';
 
 function Homepage() {
 
-    const [lat, setLat] = useState(""); 
-    const [lon, setLon] = useState("");
-    const [item, setItem] = useState(""); // Location 
+    const [lat, setLat] = useState(41.0091982); 
+    const [lon, setLon] = useState(28.9662187);
+    const [item, setItem] = useState("Istanbul"); // Location 
     const [dateTime, setDateTime] = useState(""); 
 
     // FIND "LAT" - "LOT" 
