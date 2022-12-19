@@ -45,7 +45,7 @@ function Section({ lat, lon, item,setDateTime }) {
     //     }
     // };
 
-    console.log("deneme hava durumu:",current.weather[0].main)
+    // console.log("deneme hava durumu:",current.weather[0].main)
 
     return (
         <section>
