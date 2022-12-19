@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
+
+// COMPONENTS
 import GoogleMapContent from './GoogleMapContent';
+
+// CSS
+import '../css/sectionBackgrounds.css'
 
 function Section({ lat, lon, item,setDateTime }) {
 
@@ -32,6 +37,8 @@ function Section({ lat, lon, item,setDateTime }) {
     // console.log("Week Day :",weekDay); // Saturday
     // console.log("Clock:",Clock); // 22:50:15
 
+    const weatherStatus = current.weather[0].description;
+
     return (
         <section>
             <div className='container mt-4'>
@@ -39,7 +46,28 @@ function Section({ lat, lon, item,setDateTime }) {
 
                     {
                         current.name !== undefined ?
-                            <div className='current-weather col-8'>
+                            // <div className='current-weather bckgrnd col-8'>
+                            <div className={
+                                ((weatherStatus === "clear sky") && (trHour >= 8 && trHour <= 18)) ? "current-weather bckgrnd col-8" : 
+                                ((weatherStatus === "clear sky") && (trHour < 8 && trHour > 18)) ? "current-weather nightclearSky col-8" : 
+                                ((weatherStatus === "few clouds") && (trHour >= 8 && trHour <= 18))  ? "current-weather fewClouds col-8" :
+                                ((weatherStatus === "few clouds") && (trHour < 8 && trHour > 18))  ? "current-weather BrokenClouds col-8" : 
+                                weatherStatus === "scattered clouds"  ? "current-weather scatteredClouds col-8" :
+                                weatherStatus === "broken clouds"  ? "current-weather brokenClouds col-8" :
+                                ((weatherStatus === "shower rain") && (trHour >= 8 && trHour <= 18)) ? "current-weather showerRain col-8" :
+                                ((weatherStatus === "shower rain") && (trHour < 8 && trHour > 18)) ? "current-weather nightShowerRain col-8" :
+                                ((weatherStatus === "rain") && (trHour >= 8 && trHour <= 18)) ? "current-weather rain col-8" :
+                                ((weatherStatus === "rain") && (trHour < 8 && trHour > 18)) ? "current-weather nightRain col-8" :
+                                ((weatherStatus === "mist") && (trHour >= 8 && trHour <= 18)) ? "current-weather mist col-8" :
+                                ((weatherStatus === "mist") && (trHour < 8 && trHour > 18)) ? "current-weather mist2 col-8" :
+                                ((weatherStatus === "snow") && (trHour >= 8 && trHour <= 18)) ? "current-weather SNOW col-8" :
+                                ((weatherStatus === "snow") && (trHour < 8 && trHour > 18)) ? "current-weather nightSNOW col-8" :
+                                weatherStatus === "thunderstorm"  ? "current-weather thunderstorm col-8" : null
+
+
+
+                                }
+                                >
 
                                 <div className="d-flex">
                                     <h4 className='col-9 CWD'>CURRENT WEATHER DATA</h4>
@@ -88,6 +116,11 @@ function Section({ lat, lon, item,setDateTime }) {
                     </div>
 
 
+<div className='col-12'>
+    <img src="assets/set2.gif" alt=""/>
+    <img src="assets/3.gif" alt="" height={100}/>
+
+</div>
 
                 </div>
             </div>
