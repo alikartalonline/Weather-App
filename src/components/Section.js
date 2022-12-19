@@ -37,13 +37,15 @@ function Section({ lat, lon, item,setDateTime }) {
     // console.log("Week Day :",weekDay); // Saturday
     // console.log("Clock:",Clock); // 22:50:15
 
-    const weatherStatus = () => {
-        if(current.name !== undefined){
-            return current.weather[0].description
-        } else {
-            return undefined
-        }
-    };
+    // const weatherStatus = () => {
+    //     if(current.name !== undefined){
+    //         return current.weather[0].description
+    //     } else {
+    //         return undefined
+    //     }
+    // };
+
+    console.log("deneme hava durumu:",current.weather[0].main)
 
     return (
         <section>
@@ -54,21 +56,21 @@ function Section({ lat, lon, item,setDateTime }) {
                         current.name !== undefined ?
                             // <div className='current-weather bckgrnd col-8'>
                             <div className={
-                                ((weatherStatus() === "clear sky") && (trHour >= 8 && trHour <= 18)) ? "current-weather bckgrnd col-8" : 
-                                ((weatherStatus() === "clear sky") && (trHour < 8 && trHour > 18)) ? "current-weather nightclearSky col-8" : 
-                                ((weatherStatus() === "few clouds") && (trHour >= 8 && trHour <= 18))  ? "current-weather fewClouds col-8" :
-                                ((weatherStatus() === "few clouds") && (trHour < 8 && trHour > 18))  ? "current-weather BrokenClouds col-8" : 
-                                weatherStatus() === "scattered clouds"  ? "current-weather scatteredClouds col-8" :
-                                weatherStatus() === "broken clouds"  ? "current-weather brokenClouds col-8" :
-                                ((weatherStatus() === "shower rain") && (trHour >= 8 && trHour <= 18)) ? "current-weather showerRain col-8" :
-                                ((weatherStatus() === "shower rain") && (trHour < 8 && trHour > 18)) ? "current-weather nightShowerRain col-8" :
-                                ((weatherStatus() === "rain") && (trHour >= 8 && trHour <= 18)) ? "current-weather rain col-8" :
-                                ((weatherStatus() === "rain") && (trHour < 8 && trHour > 18)) ? "current-weather nightRain col-8" :
-                                ((weatherStatus() === "mist") && (trHour >= 8 && trHour <= 18)) ? "current-weather mist col-8" :
-                                ((weatherStatus() === "mist") && (trHour < 8 && trHour > 18)) ? "current-weather mist2 col-8" :
-                                ((weatherStatus() === "snow") && (trHour >= 8 && trHour <= 18)) ? "current-weather SNOW col-8" :
-                                ((weatherStatus() === "snow") && (trHour < 8 && trHour > 18)) ? "current-weather nightSNOW col-8" :
-                                weatherStatus() === "thunderstorm"  ? "current-weather thunderstorm col-8" : undefined
+                                ((current.weather[0].description === "clear sky") && (trHour >= 8 && trHour <= 18)) ? "current-weather bckgrnd col-8" : 
+                                ((current.weather[0].description === "clear sky") && (trHour < 8 && trHour > 18)) ? "current-weather nightclearSky col-8" : 
+                                ((current.weather[0].description === "few clouds") && (trHour >= 8 && trHour <= 18))  ? "current-weather fewClouds col-8" :
+                                ((current.weather[0].description === "few clouds") && (trHour < 8 && trHour > 18))  ? "current-weather BrokenClouds col-8" : 
+                                current.weather[0].description === "scattered clouds"  ? "current-weather scatteredClouds col-8" :
+                                current.weather[0].description === "broken clouds"  ? "current-weather brokenClouds col-8" :
+                                ((current.weather[0].description === "shower rain") && (trHour >= 8 && trHour <= 18)) ? "current-weather showerRain col-8" :
+                                ((current.weather[0].description === "shower rain") && (trHour < 8 && trHour > 18)) ? "current-weather nightShowerRain col-8" :
+                                ((current.weather[0].description === "rain") && (trHour >= 8 && trHour <= 18)) ? "current-weather rain col-8" :
+                                ((current.weather[0].description === "rain") && (trHour < 8 && trHour > 18)) ? "current-weather nightRain col-8" :
+                                ((current.weather[0].description === "mist") && (trHour >= 8 && trHour <= 18)) ? "current-weather mist col-8" :
+                                ((current.weather[0].description === "mist") && (trHour < 8 && trHour > 18)) ? "current-weather mist2 col-8" :
+                                ((current.weather[0].description === "snow") && (trHour >= 8 && trHour <= 18)) ? "current-weather SNOW col-8" :
+                                ((current.weather[0].description === "snow") && (trHour < 8 && trHour > 18)) ? "current-weather nightSNOW col-8" :
+                                current.weather[0].description === "thunderstorm"  ? "current-weather thunderstorm col-8" : "current-weather rain col-8"
                                 }
                                 >
 
@@ -82,9 +84,49 @@ function Section({ lat, lon, item,setDateTime }) {
 
 
                                 <div className="d-flex mt-3"  >
-                                    <img
-                                        src={`http://openweathermap.org/img/wn/${current.weather[0].icon}.png`}
-                                        alt="icon" width={100} height={100} />
+
+                                        {
+                                            current.weather[0].description === "clear sky" ?
+                                            <img
+                                            src="/gif/clearskyicon.gif"
+                                            alt="icon" width={100} height={100} /> : 
+                                            current.weather[0].description === "few clouds" ?
+                                            <img
+                                            src="/gif/fewcloudsicon.gif"
+                                            alt="icon" width={100} height={100} /> :
+                                            current.weather[0].description === "scattered clouds" ?
+                                            <img
+                                            src="/gif/scatteredcloudsicon.gif"
+                                            alt="icon" width={150} height={130} /> : 
+                                            current.weather[0].description === "broken clouds" ?
+                                            <img
+                                            src="/gif/brokencloudsicon.gif"
+                                            alt="icon" width={150} height={130} /> :
+                                            current.weather[0].description === "rain" ?
+                                            <img
+                                            src="/gif/rainicon.gif"
+                                            alt="icon" width={150} height={130} /> : 
+                                            current.weather[0].description === "shower rain" ?
+                                            <img
+                                            src="/gif/showerrainicon.gif"
+                                            alt="icon" width={150} height={130} /> :
+                                            current.weather[0].description === "thunderstorm" ?
+                                            <img
+                                            src="/gif/thunderstormicon.gif"
+                                            alt="icon" width={150} height={130} /> :
+                                            current.weather[0].description === "snow" ?
+                                            <img
+                                            src="/gif/snowicon.gif"
+                                            alt="icon" width={150} height={130} /> :
+                                            current.weather[0].description === "mist" ?
+                                            <img
+                                            src="/gif/misticon.gif"
+                                            alt="icon" width={100} height={100} /> : 
+                                            <img
+                                            src={`http://openweathermap.org/img/wn/${current.weather[0].icon}.png`}
+                                            alt="icon" width={100} height={100} className="ms-3" />
+                                        }
+
 
                                     <div className='d-flex'>
                                         <h1 className='ms-3 main-temp'>{current.main.temp.toFixed()}</h1>
@@ -119,9 +161,9 @@ function Section({ lat, lon, item,setDateTime }) {
                     </div>
 
 
-<div className='col-12'>
-
-</div>
+{/* <div className='col-12'>
+<img src="/gif/clearskyicon.gif" alt="icon" width={100} height={100} />
+</div> */}
 
                 </div>
             </div>
