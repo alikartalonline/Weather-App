@@ -34,8 +34,9 @@ header {
 
 .current-weather {
   /* border: 1px solid red; */
+  /* height: 265px; */
   width: 52%;
-  height: 265px;
+  min-height: fit-content;
   border-radius: 0.5em;
   padding: 15px;
   color: white;
