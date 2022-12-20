@@ -25,27 +25,13 @@ function Section({ lat, lon, item,setDateTime }) {
 
     const dates = new Date()
     const trHour = (dates.getHours('tr-TR', current.timezone)); 
+    // console.log("trHour:", trHour); // 22
     // const options = { weekday: 'long' };
-    // const dateTime = (dates.toLocaleString(current.timezone, 'tr-TR', { timeZone: 'UTC' }));
-    // const dateString = (dates.toDateString(current.timezone));
-    // const weekDay = (dates.toLocaleDateString('en-EN', options, current.timezone));
-    // const Clock = (dates.toLocaleTimeString('tr-TR', current.timezone));
-
-    // console.log("tr date:", trHour); // 22
-    // console.log("Date and Time:",dateTime); // 10.12.2022 22:50:15
-    // console.log("Date String :",dateString); //  Sat Dec 10 2022
-    // console.log("Week Day :",weekDay); // Saturday
-    // console.log("Clock:",Clock); // 22:50:15
-
-    // const weatherStatus = () => {
-    //     if(current.name !== undefined){
-    //         return current.weather[0].description
-    //     } else {
-    //         return undefined
-    //     }
-    // };
-
-    // console.log("deneme hava durumu:",current.weather[0].main)
+    // const dateTime = (dates.toLocaleString(current.timezone, 'tr-TR', { timeZone: 'UTC' })); // 10.12.2022 22:50:15
+    // const dateString = (dates.toDateString(current.timezone)); //  Sat Dec 10 2022 
+    // const weekDay = (dates.toLocaleDateString('en-EN', options, current.timezone));  // Saturday
+    // const Clock = (dates.toLocaleTimeString('tr-TR', current.timezone)); // 22:50:15
+ 
 
     return (
         <section>
@@ -54,36 +40,48 @@ function Section({ lat, lon, item,setDateTime }) {
 
                     {
                         current.name !== undefined ?
-                            // <div className='current-weather bckgrnd col-8'>
+
                             <div className={
-                                ((current.weather[0].description === "clear sky") && (trHour >= 8 && trHour <= 18)) ? "current-weather bckgrnd col-8" : 
-                                ((current.weather[0].description === "clear sky") && (trHour < 8 && trHour > 18)) ? "current-weather nightclearSky col-8" : 
-                                ((current.weather[0].description === "few clouds") && (trHour >= 8 && trHour <= 18))  ? "current-weather fewClouds col-8" :
-                                ((current.weather[0].description === "few clouds") && (trHour < 8 && trHour > 18))  ? "current-weather BrokenClouds col-8" : 
-                                current.weather[0].description === "scattered clouds"  ? "current-weather scatteredClouds col-8" :
-                                current.weather[0].description === "broken clouds"  ? "current-weather brokenClouds col-8" :
-                                ((current.weather[0].description === "shower rain") && (trHour >= 8 && trHour <= 18)) ? "current-weather showerRain col-8" :
-                                ((current.weather[0].description === "shower rain") && (trHour < 8 && trHour > 18)) ? "current-weather nightShowerRain col-8" :
-                                ((current.weather[0].description === "rain") && (trHour >= 8 && trHour <= 18)) ? "current-weather rain col-8" :
-                                ((current.weather[0].description === "rain") && (trHour < 8 && trHour > 18)) ? "current-weather nightRain col-8" :
-                                ((current.weather[0].description === "mist") && (trHour >= 8 && trHour <= 18)) ? "current-weather mist col-8" :
-                                ((current.weather[0].description === "mist") && (trHour < 8 && trHour > 18)) ? "current-weather mist2 col-8" :
-                                ((current.weather[0].description === "snow") && (trHour >= 8 && trHour <= 18)) ? "current-weather SNOW col-8" :
-                                ((current.weather[0].description === "snow") && (trHour < 8 && trHour > 18)) ? "current-weather nightSNOW col-8" :
-                                current.weather[0].description === "thunderstorm"  ? "current-weather thunderstorm col-8" : "current-weather rain col-8"
+                                ((current.weather[0].main === "Clear") && (trHour >= 8 && trHour <= 18)) ? "current-weather clearSky col-8" : 
+                                ((current.weather[0].main === "Clear") && (trHour < 8 && trHour > 18)) ? "current-weather nightclearSky col-8" : 
+                                ((current.weather[0].main === "Clouds") && (trHour >= 8 && trHour <= 18))  ? "current-weather scatteredClouds col-8" :
+                                ((current.weather[0].main === "Clouds") && (trHour < 8 && trHour > 18))  ? "current-weather cloudsnightsky col-8" : 
+                                ((current.weather[0].main === "Rain") && (trHour >= 8 && trHour <= 18)) ? "current-weather rain col-8 " :
+                                ((current.weather[0].main === "Rain") && (trHour < 8 && trHour > 18)) ? "current-weather nightRain col-8" :
+                                current.weather[0].main === "Fog" ? "current-weather mist2 col-8" :
+                                current.weather[0].main === "Smoke " ? "current-weather mist2 col-8" :
+                                current.weather[0].main === "Haze " ? "current-weather mist2 col-8" :
+                                current.weather[0].main === "Mist" ? "current-weather mist col-8" :
+                                current.weather[0].main === "Dust" ? "current-weather mist col-8" :
+                                current.weather[0].main === "Sand" ? "current-weather mist col-8" :
+                                current.weather[0].main === "Ash" ? "current-weather Ash col-8" :
+                                current.weather[0].main === "Drizzle " ? "current-weather ShowerRain col-8" :
+                                ((current.weather[0].main === "Snow") && (trHour >= 8 && trHour <= 18)) ? "current-weather SNOW col-8" :
+                                ((current.weather[0].main === "Snow") && (trHour < 8 && trHour > 18)) ? "current-weather nightSNOW col-8" :
+                                current.weather[0].main === "Thunderstorm"  ? "current-weather thunderstorm col-8" : 
+                                current.weather[0].main === "Tornado "  ? "current-weather nightThunderstorm col-8" :
+                                current.weather[0].main === "Squall"  ? "current-weather thunderstorm2 col-8" : "current-weather rain col-8"
                                 }
                                 >
 
                                 <div className="d-flex">
-                                    <h4 className='col-9 CWD'>CURRENT WEATHER DATA</h4>
-                                    {
-                                        current.name === "Karaköy" ? <h1 className=' col-3'>Istanbul</h1>
-                                            : <h1>{current.name}</h1>
-                                    }
+                                   <h4 className='col-8 CWD'>CURRENT WEATHER DATA</h4>
+
+                                    <ul className='col-4'>
+                                        <li className='country-li fs-2'>
+                                            {
+                                                current.name === "Karaköy" ? <>Istanbul</>
+                                                    : <>{current.name}</>
+                                            }
+                                        </li>
+                                        <li className="fs-5 h3 border-top country-li">
+                                            {current.sys.country}
+                                        </li>
+                                    </ul>  
                                 </div>
 
 
-                                <div className="d-flex mt-3"  >
+                                <div className="d-flex mt-2"  >
 
                                         {
                                             current.weather[0].description === "clear sky" ?
@@ -159,11 +157,6 @@ function Section({ lat, lon, item,setDateTime }) {
                     <div className='col-4'>
                         <GoogleMapContent lat={lat} lon={lon} />
                     </div>
-
-
-{/* <div className='col-12'>
-<img src="/gif/clearskyicon.gif" alt="icon" width={100} height={100} />
-</div> */}
 
                 </div>
             </div>

@@ -33,10 +33,10 @@ header {
 }
 
 .current-weather {
-  /* border: 1px solid red; */
-  /* height: 265px; */
   width: 52%;
+  min-width: fit-content;
   min-height: fit-content;
+  /* max-height: 350px; */
   border-radius: 0.5em;
   padding: 15px;
   color: white;
@@ -142,7 +142,9 @@ nav{
   font-size: 0.9em;
 }
 
-
+.country-li{
+  text-align: center;
+}
 
 
 

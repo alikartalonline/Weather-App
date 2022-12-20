@@ -70,6 +70,12 @@
   background-repeat: round;
 }
 
+.cloudsnightsky{
+  background-image: url("../../public/gif/cloudsnightsky.gif");
+  background-repeat: no-repeat;
+  background-repeat: round;
+}
+
 .showerRain {
   background-image: url("../../public/gif/ShowerRain.gif");
   background-repeat: no-repeat;
@@ -94,6 +100,16 @@
   background-repeat: round;
 }
 
+.thunderstorm2{
+  background-image: url("../../public/gif/thunderstorm2.gif");
+  background-repeat: no-repeat;
+  background-repeat: round;
+}
 
+.Ash{
+  background-image: url("../../public/gif/Ash.gif");
+  background-repeat: no-repeat;
+  background-repeat: round;
+}
 
 
