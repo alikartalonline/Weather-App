@@ -32,6 +32,8 @@ function Section({ lat, lon, item,setDateTime }) {
     // const weekDay = (dates.toLocaleDateString('en-EN', options, current.timezone));  // Saturday
     // const Clock = (dates.toLocaleTimeString('tr-TR', current.timezone)); // 22:50:15
  
+console.log("main:",current.weather[0].main)
+console.log("descp:",current.weather[0].description)
 
     return (
         <section>
@@ -43,11 +45,11 @@ function Section({ lat, lon, item,setDateTime }) {
 
                             <div className={
                                 ((current.weather[0].main === "Clear") && (trHour >= 8 && trHour <= 18)) ? "current-weather clearSky col-8" : 
-                                ((current.weather[0].main === "Clear") && (trHour < 8 && trHour > 18)) ? "current-weather nightclearSky col-8" : 
+                                ((current.weather[0].main === "Clear") ^ (trHour < 8 && trHour > 18)) ? "current-weather nightclearSky col-8" : 
                                 ((current.weather[0].main === "Clouds") && (trHour >= 8 && trHour <= 18))  ? "current-weather scatteredClouds col-8" :
-                                ((current.weather[0].main === "Clouds") && (trHour < 8 && trHour > 18))  ? "current-weather cloudsnightsky col-8" : 
+                                ((current.weather[0].main === "Clouds") ^ (trHour < 8 && trHour > 18))  ? "current-weather cloudsnightsky col-8" : 
                                 ((current.weather[0].main === "Rain") && (trHour >= 8 && trHour <= 18)) ? "current-weather rain col-8 " :
-                                ((current.weather[0].main === "Rain") && (trHour < 8 && trHour > 18)) ? "current-weather nightRain col-8" :
+                                ((current.weather[0].main === "Rain") ^ (trHour < 8 && trHour > 18)) ? "current-weather nightRain col-8" :
                                 current.weather[0].main === "Fog" ? "current-weather mist2 col-8" :
                                 current.weather[0].main === "Smoke " ? "current-weather mist2 col-8" :
                                 current.weather[0].main === "Haze " ? "current-weather mist2 col-8" :
@@ -57,10 +59,10 @@ function Section({ lat, lon, item,setDateTime }) {
                                 current.weather[0].main === "Ash" ? "current-weather Ash col-8" :
                                 current.weather[0].main === "Drizzle " ? "current-weather ShowerRain col-8" :
                                 ((current.weather[0].main === "Snow") && (trHour >= 8 && trHour <= 18)) ? "current-weather SNOW col-8" :
-                                ((current.weather[0].main === "Snow") && (trHour < 8 && trHour > 18)) ? "current-weather nightSNOW col-8" :
+                                ((current.weather[0].main === "Snow") ^ (trHour < 8 && trHour > 18)) ? "current-weather nightSNOW col-8" :
                                 current.weather[0].main === "Thunderstorm"  ? "current-weather thunderstorm col-8" : 
                                 current.weather[0].main === "Tornado "  ? "current-weather nightThunderstorm col-8" :
-                                current.weather[0].main === "Squall"  ? "current-weather thunderstorm2 col-8" : "current-weather rain col-8"
+                                current.weather[0].main === "Squall"  ? "current-weather thunderstorm2 col-8" : "current-weather bg-dark col-8"
                                 }
                                 >
 
@@ -84,42 +86,70 @@ function Section({ lat, lon, item,setDateTime }) {
                                 <div className="d-flex mt-2"  >
 
                                         {
-                                            current.weather[0].description === "clear sky" ?
+                                            ((current.weather[0].main === "Clear") && (trHour >= 8 && trHour <= 18)) ?
                                             <img
                                             src="/gif/clearskyicon.gif"
-                                            alt="icon" width={100} height={100} /> : 
-                                            current.weather[0].description === "few clouds" ?
+                                            alt="clearskyicon" width={100} height={100} /> :
+                                            ((current.weather[0].main === "Clear") ^ (trHour < 8 && trHour > 18)) ?
+                                            <img
+                                            src="/gif/moon7.gif" className='mt-2'
+                                            alt="moonicon" width={55} height={55} /> :
+                                            ((current.weather[0].main === "Clouds") && (trHour >= 8 && trHour <= 18)) ?
                                             <img
                                             src="/gif/fewcloudsicon.gif"
-                                            alt="icon" width={100} height={100} /> :
-                                            current.weather[0].description === "scattered clouds" ?
-                                            <img
-                                            src="/gif/scatteredcloudsicon.gif"
-                                            alt="icon" width={150} height={130} /> : 
-                                            current.weather[0].description === "broken clouds" ?
+                                            alt="fewcloudsicon" width={100} height={100} /> :
+                                            ((current.weather[0].main === "Clouds") ^ (trHour < 8 && trHour > 18)) ?
                                             <img
                                             src="/gif/brokencloudsicon.gif"
-                                            alt="icon" width={150} height={130} /> :
-                                            current.weather[0].description === "rain" ?
+                                            alt="brokencloudsicon" width={135} height={120} /> :
+                                            ((current.weather[0].main === "Rain") && (trHour >= 8 && trHour <= 18)) ?
                                             <img
                                             src="/gif/rainicon.gif"
-                                            alt="icon" width={150} height={130} /> : 
-                                            current.weather[0].description === "shower rain" ?
+                                            alt="rainicon" width={150} height={120} /> : 
+                                            ((current.weather[0].main === "Rain") ^ (trHour < 8 && trHour > 18)) ?
                                             <img
                                             src="/gif/showerrainicon.gif"
-                                            alt="icon" width={150} height={130} /> :
-                                            current.weather[0].description === "thunderstorm" ?
-                                            <img
-                                            src="/gif/thunderstormicon.gif"
-                                            alt="icon" width={150} height={130} /> :
-                                            current.weather[0].description === "snow" ?
+                                            alt="showerrainicon" width={150} height={120} /> :
+                                            current.weather[0].main === "Snow" ?
                                             <img
                                             src="/gif/snowicon.gif"
-                                            alt="icon" width={150} height={130} /> :
-                                            current.weather[0].description === "mist" ?
+                                            alt="snowicon" width={150} height={120} /> : 
+                                            current.weather[0].main === "Mist" ?
                                             <img
                                             src="/gif/misticon.gif"
-                                            alt="icon" width={100} height={100} /> : 
+                                            alt="misticon" width={100} height={100} /> :
+                                            current.weather[0].main === "Thunderstorm" ?
+                                            <img
+                                            src="/gif/thunderstormicon.gif"
+                                            alt="thunderstormicon" width={150} height={120} /> :
+                                            current.weather[0].main === "Tornado" ?
+                                            <img
+                                            src="/gif/thunderstormicon.gif"
+                                            alt="thunderstormicon" width={150} height={120} /> :
+                                            current.weather[0].main === "Squall" ?
+                                            <img
+                                            src="/gif/Squallicon.gif"
+                                            alt="Squallicon" width={150} height={120} /> :
+                                            current.weather[0].main === "Dust" ?
+                                            <img
+                                            src="/gif/thunderstormicon2.gif"
+                                            alt="thunderstormicon2" width={150} height={120} /> :
+                                            current.weather[0].main === "Drizzle" ?
+                                            <img
+                                            src="/gif/drizzleicon.gif"
+                                            alt="drizzleicon" width={150} height={120} /> :
+                                            current.weather[0].main === "Ash" ?
+                                            <img
+                                            src="/gif/ashicon.gif"
+                                            alt="ashicon" width={150} height={120} /> :
+                                            current.weather[0].main === "Smoke" ?
+                                            <img
+                                            src="/gif/scatteredcloudsicon.gif"
+                                            alt="scatteredcloudsicon" width={150} height={120} /> :
+                                            current.weather[0].main === "Haze" ?
+                                            <img
+                                            src="/gif/scatteredcloudsicon.gif"
+                                            alt="scatteredcloudsicon" width={150} height={120} /> :
                                             <img
                                             src={`http://openweathermap.org/img/wn/${current.weather[0].icon}.png`}
                                             alt="icon" width={100} height={100} className="ms-3" />
