@@ -32,8 +32,8 @@ function Section({ lat, lon, item,setDateTime }) {
     // const weekDay = (dates.toLocaleDateString('en-EN', options, current.timezone));  // Saturday
     // const Clock = (dates.toLocaleTimeString('tr-TR', current.timezone)); // 22:50:15
  
-console.log("main:",current.weather[0].main)
-console.log("descp:",current.weather[0].description)
+// console.log("main:",current.weather[0].main)
+// console.log("descp:",current.weather[0].description)
 
     return (
         <section>

@@ -5,6 +5,7 @@ import axios from 'axios';
 import Header from './Header';
 import Section from './Section';
 import Nav from './Nav';
+import ArticleHourly from './ArticleHourly';
 
 function Homepage() {
 
@@ -13,7 +14,7 @@ function Homepage() {
     const [item, setItem] = useState("Istanbul"); // Location 
     const [dateTime, setDateTime] = useState(""); 
 
-    // FIND "LAT" - "LOT" 
+    // FIND "LAT" - "LON" 
     useEffect(() => {
         axios.get(`https://api.openweathermap.org/geo/1.0/direct?q=${item}&appid=${process.env.REACT_APP_API_KEY}`)
             .then(res => {
@@ -31,6 +32,7 @@ function Homepage() {
             <Header item={item} setItem={setItem} dateTime={dateTime} />
             <Nav />
             <Section lat={lat} lon={lon} item={item} setDateTime={setDateTime} />
+            <ArticleHourly lat={lat} lon={lon} item={item}/>
         </div>
     )
 };
