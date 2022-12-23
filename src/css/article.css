@@ -1,5 +1,15 @@
 
 .day1{
     border: 1px solid red;
-    height: 300px;
+    min-height: min-content;
+    border-radius: 0.8em;
+}
+
+
+.article-titles{
+    text-align: center;
+}
+
+article ul li{
+    list-style: none;
 }
