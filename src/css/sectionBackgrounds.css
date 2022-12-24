@@ -16,6 +16,13 @@
   background-size: cover;
 }
 
+.nightclearSky2 {
+  background-image: url("../../public/gif/clearNight2.gif");
+  background-repeat: round;
+  background-size: cover;
+}
+
+
 .mist2 {
   background-image: url("../../public/gif/mist2.gif");
   background-repeat: no-repeat;

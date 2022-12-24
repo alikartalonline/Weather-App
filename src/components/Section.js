@@ -44,8 +44,9 @@ function Section({ lat, lon, item,setDateTime }) {
                         current.name !== undefined ?
 
                             <div className={
-                                ((current.weather[0].main === "Clear") && (trHour >= 8 && trHour <= 18)) ? "current-weather clearSky col-8" : 
-                                ((current.weather[0].main === "Clear") ^ (trHour < 8 && trHour > 18)) ? "current-weather nightclearSky col-8" : 
+                                ((current.weather[0].main === "Clear") && (trHour >= 8 && trHour <= 15)) ? "current-weather clearSky col-8" : 
+                                ((current.weather[0].main === "Clear") ^ (trHour > 15 && trHour <= 19)) ? "current-weather nightclearSky col-8" : 
+                                ((current.weather[0].main === "Clear") ^ (trHour < 8 && trHour <= 20)) ? "current-weather nightclearSky2 col-8" : 
                                 ((current.weather[0].main === "Clouds") && (trHour >= 8 && trHour <= 18))  ? "current-weather scatteredClouds col-8" :
                                 ((current.weather[0].main === "Clouds") ^ (trHour < 8 && trHour > 18))  ? "current-weather cloudsnightsky col-8" : 
                                 ((current.weather[0].main === "Rain") && (trHour >= 8 && trHour <= 18)) ? "current-weather rain col-8 " :
