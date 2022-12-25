@@ -39,43 +39,45 @@ li img {
   background-size: cover;
 }
 
-.daysNightx1 {
+.daysNight8 {
   background-image: url("../../public/gif/clearNight4.gif");
   background-repeat: space;
   background-size: cover;
 }
 
-.daysNightx2 {
+.daysLight8 {
+  background-image: url("../../public/gif/40.gif");
+  background-position: 40%;
+  background-repeat: space;
+  background-size: cover;
+}
+
+.daysNight16 {
   background-image: url("../../public/gif/clearNight3.gif");
   background-size: cover;
 }
 
-.daysNightx3 {
-  background-image: url("../../public/gif/cloudsnightsky.gif");
-  background-size: cover;
-}
-
-.daysNightx4 {
-  background-image: url("../../public/gif/Ash.gif");
-  background-size: cover;
-}
-
-.daysLightx1 {
-  background-image: url("../../public/gif/40.gif");
-  background-size: cover;
-}
-
-.daysLightx2 {
+.daysLight16 {
   background-image: url("../../public/gif/Rain.gif");
   background-size: cover;
 }
 
-.daysLightx3 {
+.daysNight24 {
+  background-image: url("../../public/gif/cloudsnightsky.gif");
+  background-size: cover;
+}
+
+.daysLight24 {
   background-image: url("../../public/gif/37.gif");
   background-size: cover;
 }
 
-.daysLightx4 {
+.daysNight32 {
+  background-image: url("../../public/gif/Ash.gif");
+  background-size: cover;
+}
+
+.daysLight32 {
   background-image: url("../../public/gif/33.gif");
   background-size: cover;
 }
