@@ -37,6 +37,7 @@ li img {
 .daysLight0 {
   background-image: url("../../public/gif/38.gif");
   background-size: cover;
+  background-position: 15%;
 }
 
 .daysNight8 {
@@ -58,9 +59,15 @@ li img {
 }
 
 .daysLight16 {
+  background-image: url("../../public/gif/40.gif");
+  background-size: cover;
+  background-position: 80%;
+}
+
+/* .daysLight16 {
   background-image: url("../../public/gif/Rain.gif");
   background-size: cover;
-}
+} */
 
 .daysNight24 {
   background-image: url("../../public/gif/cloudsnightsky.gif");
@@ -68,9 +75,15 @@ li img {
 }
 
 .daysLight24 {
-  background-image: url("../../public/gif/37.gif");
+  background-image: url("../../public/gif/38.gif");
   background-size: cover;
+  background-position: 40%;
 }
+
+/* .daysLight24 {
+    background-image: url("../../public/gif/37.gif");
+    background-size: cover;
+  } */
 
 .daysNight32 {
   background-image: url("../../public/gif/Ash.gif");
@@ -78,6 +91,12 @@ li img {
 }
 
 .daysLight32 {
-  background-image: url("../../public/gif/33.gif");
+  background-image: url("../../public/gif/38.gif");
   background-size: cover;
+  background-position: 60%;
 }
+
+/* .daysLight32 {
+    background-image: url("../../public/gif/33.gif");
+    background-size: cover;
+  } */

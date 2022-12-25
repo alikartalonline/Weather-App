@@ -33,6 +33,7 @@ header {
 }
 
 .current-weather {
+  margin-left: 1%;
   width: 52%;
   min-width: fit-content;
   min-height: fit-content;
@@ -84,7 +85,7 @@ header {
 
 .map-container {
   height: 100%;
-  width: 100%;
+  width: 105%;
 }
 
 .headerInfo {

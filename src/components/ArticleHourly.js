@@ -36,7 +36,7 @@ function ArticleHourly({ lat, lon, item }) {
                 <div className='row'>
                     {
                         hourly != "" ?
-                            <div className='d-flex'>
+                            <div className='d-flex col-3'>
                                 <ArticleDay1 hourly={hourly} />
                                 <ArticleDay2 hourly={hourly} />
                                 <ArticleDay3 hourly={hourly} />
