@@ -45,12 +45,12 @@ function Section({ lat, lon, item,setDateTime }) {
 
                             <div className={
                                 ((current.weather[0].main === "Clear") && (trHour >= 8 && trHour <= 15)) ? "current-weather clearSky col-8" : 
-                                ((current.weather[0].main === "Clear") ^ (trHour > 15 && trHour <= 19)) ? "current-weather nightclearSky col-8" : 
-                                ((current.weather[0].main === "Clear") ^ (trHour < 8 && trHour <= 20)) ? "current-weather nightclearSky2 col-8" : 
+                                ((current.weather[0].main === "Clear") && (trHour > 15 && trHour <= 19)) ? "current-weather nightclearSky col-8" : 
+                                ((current.weather[0].main === "Clear") && (trHour < 8 && trHour <= 20)) ? "current-weather nightclearSky2 col-8" : 
                                 ((current.weather[0].main === "Clouds") && (trHour >= 8 && trHour <= 18))  ? "current-weather scatteredClouds col-8" :
-                                ((current.weather[0].main === "Clouds") ^ (trHour < 8 && trHour > 18))  ? "current-weather cloudsnightsky col-8" : 
+                                ((current.weather[0].main === "Clouds") && (trHour < 8 && trHour > 18))  ? "current-weather cloudsnightsky col-8" : 
                                 ((current.weather[0].main === "Rain") && (trHour >= 8 && trHour <= 18)) ? "current-weather rain col-8 " :
-                                ((current.weather[0].main === "Rain") ^ (trHour < 8 && trHour > 18)) ? "current-weather nightRain col-8" :
+                                ((current.weather[0].main === "Rain") && (trHour < 8 && trHour > 18)) ? "current-weather nightRain col-8" :
                                 current.weather[0].main === "Fog" ? "current-weather mist2 col-8" :
                                 current.weather[0].main === "Smoke " ? "current-weather mist2 col-8" :
                                 current.weather[0].main === "Haze " ? "current-weather mist2 col-8" :
@@ -60,7 +60,7 @@ function Section({ lat, lon, item,setDateTime }) {
                                 current.weather[0].main === "Ash" ? "current-weather Ash col-8" :
                                 current.weather[0].main === "Drizzle " ? "current-weather ShowerRain col-8" :
                                 ((current.weather[0].main === "Snow") && (trHour >= 8 && trHour <= 18)) ? "current-weather SNOW col-8" :
-                                ((current.weather[0].main === "Snow") ^ (trHour < 8 && trHour > 18)) ? "current-weather nightSNOW col-8" :
+                                ((current.weather[0].main === "Snow") && (trHour < 8 && trHour > 18)) ? "current-weather nightSNOW col-8" :
                                 current.weather[0].main === "Thunderstorm"  ? "current-weather thunderstorm col-8" : 
                                 current.weather[0].main === "Tornado "  ? "current-weather nightThunderstorm col-8" :
                                 current.weather[0].main === "Squall"  ? "current-weather thunderstorm2 col-8" : "current-weather bg-dark col-8"

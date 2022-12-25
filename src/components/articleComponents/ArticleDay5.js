@@ -13,13 +13,15 @@ function ArticleDay5({ hourly }) {
 
             <div className='article-titles'>
                 <h1>
-                    {
-                        new Date(hourly.list[32].dt_txt).toLocaleDateString('en-EN', options)
+                    { hourly.city.country === "TR" ? 
+                    new Date(hourly.list[32].dt_txt).toLocaleDateString('tr-TR', options) : 
+                    new Date(hourly.list[32].dt_txt).toLocaleDateString('en-EN', options)
                     }
                 </h1>
 
                 <span className='fs-6'>
-                    {
+                    { hourly.city.country === "TR" ? 
+                        new Date(hourly.list[32].dt_txt).toLocaleDateString('tr-TR', options2) :
                         new Date(hourly.list[32].dt_txt).toLocaleDateString('en-EN', options2)
                     }
                 </span>

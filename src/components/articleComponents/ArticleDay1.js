@@ -5,8 +5,9 @@ function ArticleDay1({ hourly }) {
     const options = { weekday: 'long' };
     const options2 = { year: 'numeric', month: 'numeric', day: 'numeric' };
 
+    console.log("ülke:",hourly.city.country)
+
     return (
-        // <div className='day1 col-2 daysLight5'>
         <div className={
             ((new Date(hourly.list[0].dt_txt).getUTCHours() >= 8 && new Date(hourly.list[0].dt_txt).getUTCHours() <= 18)) ? 
             "day1 col-2 daysLight0" : 'day1 col-2 daysNight0'
@@ -14,13 +15,15 @@ function ArticleDay1({ hourly }) {
 
             <div className='article-titles'>
                 <h1>
-                    {
-                        new Date(hourly.list[0].dt_txt).toLocaleDateString('en-EN', options)
+                    { hourly.city.country === "TR" ? 
+                    new Date(hourly.list[0].dt_txt).toLocaleDateString('tr-TR', options) : 
+                    new Date(hourly.list[0].dt_txt).toLocaleDateString('en-EN', options)
                     }
                 </h1>
 
                 <span className='fs-6'>
-                    {
+                    { hourly.city.country === "TR" ? 
+                        new Date(hourly.list[0].dt_txt).toLocaleDateString('tr-TR', options2) :
                         new Date(hourly.list[0].dt_txt).toLocaleDateString('en-EN', options2)
                     }
                 </span>
@@ -58,6 +61,7 @@ function ArticleDay1({ hourly }) {
                     <span className='days-temp'>{hourly.list[0].main.temp}°C</span>
                 </li>
                 {/*height={hourly.list[0].weather[0].icon === "01n" ? 30 : 40} */}
+
                 <li>
                     {
                         new Date(hourly.list[1].dt_txt).getUTCHours() > 9 ?
