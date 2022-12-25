@@ -6,12 +6,11 @@ function ArticleDay1({ hourly }) {
     const options2 = { year: 'numeric', month: 'numeric', day: 'numeric' };
 
 
-    console.log("icon number4:",hourly.list[4].weather[0].icon)
-    console.log("icon number5:",hourly.list[5].weather[0].icon)
-    console.log("icon number6:",hourly.list[6].weather[0].icon)
-
     return (
-        <div className='day1 col-2'>
+        // <div className='day1 col-2 daysLight5'>
+        <div className={
+            ((new Date(hourly.list[0].dt_txt).getUTCHours() >= 8 && new Date(hourly.list[0].dt_txt).getUTCHours() <= 18)) ? "day1 col-2 daysLight0" : 'day1 col-2 daysNight0'
+        }>
 
             <div className='article-titles'>
                 <h1>
@@ -55,8 +54,8 @@ function ArticleDay1({ hourly }) {
                         hourly.list[0].weather[0].icon === "50n" ? "/gif/misticon.gif" :
                         "/gif/clearskyicon.gif"
                     } 
-                    alt="WAppIcon"  height={hourly.list[0].weather[0].icon === "01n" ? 30 : 40}/></span>
-                    <span>{hourly.list[0].main.temp}°C</span>
+                    alt="WAppIcon" height={hourly.list[0].weather[0].icon === "01n" ? 30 : 40}/></span>
+                    <span className='days-temp'>{hourly.list[0].main.temp}°C</span>
                 </li>
 
                 <li>
@@ -86,7 +85,7 @@ function ArticleDay1({ hourly }) {
                         "/gif/clearskyicon.gif"
                     } 
                     alt="WAppIcon"  height={hourly.list[1].weather[0].icon === "01n" ? 30 : 40}/></span>
-                    <span>{hourly.list[1].main.temp}°C</span>
+                    <span className='days-temp'>{hourly.list[1].main.temp}°C</span>
                 </li>
 
                 <li>
@@ -116,7 +115,7 @@ function ArticleDay1({ hourly }) {
                         "/gif/clearskyicon.gif"
                     } 
                     alt="WAppIcon"  height={hourly.list[2].weather[0].icon === "01n" ? 30 : 40}/></span>
-                    <span>{hourly.list[2].main.temp}°C</span>
+                    <span className='days-temp'>{hourly.list[2].main.temp}°C</span>
                 </li>
 
                 <li>
@@ -146,7 +145,7 @@ function ArticleDay1({ hourly }) {
                         "/gif/clearskyicon.gif"
                     } 
                     alt="WAppIcon"  height={hourly.list[3].weather[0].icon === "01n" ? 30 : 40}/></span>
-                    <span>{hourly.list[3].main.temp}°C</span>
+                    <span className='days-temp'>{hourly.list[3].main.temp}°C</span>
                 </li>
 
 
@@ -177,7 +176,7 @@ function ArticleDay1({ hourly }) {
                         "/gif/clearskyicon.gif"
                     } 
                     alt="WAppIcon"  height={hourly.list[4].weather[0].icon === "01n" ? 30 : 40}/></span>
-                    <span>{hourly.list[4].main.temp}°C</span>
+                    <span className='days-temp'>{hourly.list[4].main.temp}°C</span>
                 </li>
 
 
@@ -208,7 +207,7 @@ function ArticleDay1({ hourly }) {
                         "/gif/clearskyicon.gif"
                     } 
                     alt="WAppIcon"  height={hourly.list[5].weather[0].icon === "01n" ? 30 : 40}/></span>
-                    <span>{hourly.list[5].main.temp}°C</span>
+                    <span className='days-temp'>{hourly.list[5].main.temp}°C</span>
                 </li>
 
 
@@ -239,7 +238,7 @@ function ArticleDay1({ hourly }) {
                         "/gif/clearskyicon.gif"
                     } 
                     alt="WAppIcon"  height={hourly.list[6].weather[0].icon === "01n" ? 30 : 40}/></span>
-                    <span>{hourly.list[6].main.temp}°C</span>
+                    <span className='days-temp'>{hourly.list[6].main.temp}°C</span>
                 </li>
 
                 <li>
@@ -269,7 +268,7 @@ function ArticleDay1({ hourly }) {
                         "/gif/clearskyicon.gif"
                     } 
                     alt="WAppIcon"  height={hourly.list[7].weather[0].icon === "01n" ? 30 : 40}/></span>
-                    <span>{hourly.list[7].main.temp}°C</span>
+                    <span className='days-temp'>{hourly.list[7].main.temp}°C</span>
                 </li>
             </ul>
         </div>

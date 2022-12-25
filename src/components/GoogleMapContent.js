@@ -1,5 +1,7 @@
 import React from 'react';
 import { useLoadScript } from '@react-google-maps/api';
+
+// COMPONENTS
 import MapDetail from './MapDetail';
 
 export default function GoogleMapContent({lat, lon}) {

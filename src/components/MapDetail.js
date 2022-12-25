@@ -9,7 +9,7 @@ function MapDetail({lat, lon}) {
         <GoogleMap
             zoom={8} 
             center={center}
-            mapContainerClassName="map-container">
+            mapContainerClassName="map-container rounded-3">
             <Marker position={center} />
         </GoogleMap>
     );

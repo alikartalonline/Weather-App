@@ -1,15 +1,81 @@
-
-.day1{
-    border: 1px solid red;
-    min-height: min-content;
-    border-radius: 0.8em;
+.day1 {
+  /* border: 1px solid red; */
+  padding: 1%;
+  min-height: fit-content;
+  min-width: fit-content;
+  border-radius: 0.5em;
 }
 
-
-.article-titles{
-    text-align: center;
+.article-titles {
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
-article ul li{
-    list-style: none;
+article ul li {
+  margin-top: 1%;
+  list-style: none;
+  margin-left: -10%;
+}
+
+.days-temp {
+  /* font-family: Georgia, "Times New Roman", Times, serif; */
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  float: right;
+}
+
+li img {
+  margin-left: 5%;
+}
+
+.daysNight0 {
+  background-image: url("../../public/gif/clearNight2.gif");
+  background-size: cover;
+}
+
+.daysLight0 {
+  background-image: url("../../public/gif/38.gif");
+  background-size: cover;
+}
+
+.daysNightx1 {
+  background-image: url("../../public/gif/clearNight4.gif");
+  background-repeat: space;
+  background-size: cover;
+}
+
+.daysNightx2 {
+  background-image: url("../../public/gif/clearNight3.gif");
+  background-size: cover;
+}
+
+.daysNightx3 {
+  background-image: url("../../public/gif/cloudsnightsky.gif");
+  background-size: cover;
+}
+
+.daysNightx4 {
+  background-image: url("../../public/gif/Ash.gif");
+  background-size: cover;
+}
+
+.daysLightx1 {
+  background-image: url("../../public/gif/40.gif");
+  background-size: cover;
+}
+
+.daysLightx2 {
+  background-image: url("../../public/gif/Rain.gif");
+  background-size: cover;
+}
+
+.daysLightx3 {
+  background-image: url("../../public/gif/37.gif");
+  background-size: cover;
+}
+
+.daysLightx4 {
+  background-image: url("../../public/gif/33.gif");
+  background-size: cover;
 }
