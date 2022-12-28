@@ -230,8 +230,8 @@ li img {
   box-sizing: border-box;
   background: rgba(0, 0, 0, 0.3);
   border: none;
-  width: 20px;
-  height: 20px;
+  min-width: 20px;
+  min-height: 20px;
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -245,3 +245,55 @@ li img {
   width: 25px;
 }
 
+.scroller {
+  display: flex;
+  min-height: 100px;
+  height: 200px;
+  width: fit-content;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  transition: height .5s linear;
+  max-width: 85%;
+  /* padding-bottom: 20px; */
+}
+
+
+.scroller ul li{
+  list-style: none;
+  margin-right: 2%;
+}
+
+.btnScroolLeft{
+  margin-top: 3%;
+  position: absolute;
+  cursor: pointer;
+  z-index: 100;
+  display: flex;
+  box-sizing: border-box;
+  background: #fff;
+  border: none;
+  width: 35px;
+  height: 35px;
+  float: right;
+  display: flex;
+  flex-direction: row;
+  outline: none;
+}
+
+.btnScroolRight{
+  margin-top: 3%;
+  /* position: relative; */
+  position: absolute;
+  right: 26%;
+  cursor: pointer;
+  z-index: 100;
+  display: flex;
+  box-sizing: border-box;
+  background: #fff;
+  border: none;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  flex-direction: row;
+  outline: none;
+}
