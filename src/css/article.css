@@ -175,3 +175,73 @@ li img {
     background-image: url("../../public/gif/33.gif");
     background-size: cover;
   } */
+
+
+  .weatherMapCardContent-E1_1 {
+    /* border-radius: 1.5em; */
+    /* justify-content: space-between; */
+    position: relative;
+    bottom: 50px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+    box-sizing: border-box;
+    width: 100%;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 12px;
+    cursor: pointer;
+}
+
+.weatherMapCardContentDetail-E1_1 {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 165px;
+}
+
+.weatherMapCardTitle-E1_1 {
+  margin-bottom: -3px;
+  display: inline-block;
+  font-size: 20px;
+  line-height: 28px;
+  max-width: 100%;
+  color: #ffffff;
+  margin-right: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.weatherMapCardSubTitle-E1_1 {
+  font-size: 12px;
+  color: #ffffff;
+  line-height: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+.jumpIcon-E1_1 {
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.3);
+  border: none;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 100%;
+}
+
+.jumpIcon-E1_1:hover{
+  border: 1px solid red;
+  height: 25px;
+  width: 25px;
+}
+

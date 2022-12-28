@@ -6,6 +6,8 @@ import Header from './Header';
 import Section from './Section';
 import Nav from './Nav';
 import ArticleHourly from './ArticleHourly';
+import ArticleMaps from './ArticleMaps';
+
 
 function Homepage() {
 
@@ -31,6 +33,7 @@ function Homepage() {
             <Nav />
             <Section lat={lat} lon={lon} item={item} setDateTime={setDateTime} />
             <ArticleHourly lat={lat} lon={lon} item={item}/>
+            <ArticleMaps />
         </div>
     );
 };
