@@ -1,9 +1,76 @@
 .day1 {
-  /* border: 1px solid red; */
   padding: 1%;
   min-height: fit-content;
   min-width: fit-content;
   border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.day1:hover {
+  box-shadow: rgba(25, 40, 93, 0.15) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px, rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px inset;
+}
+
+.day2 {
+  padding: 1%;
+  min-height: fit-content;
+  min-width: fit-content;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.day2:hover {
+  box-shadow: rgba(25, 40, 93, 0.15) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px, rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px inset;
+}
+
+.day3 {
+  padding: 1%;
+  min-height: fit-content;
+  min-width: fit-content;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.day3:hover {
+  box-shadow: rgba(25, 40, 93, 0.15) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px, rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px inset;
+}
+
+.day4 {
+  padding: 1%;
+  min-height: fit-content;
+  min-width: fit-content;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.day4:hover {
+  box-shadow: rgba(25, 40, 93, 0.15) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px, rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px inset;
+}
+
+.day5 {
+  padding: 1%;
+  min-height: fit-content;
+  min-width: fit-content;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.day5:hover {
+  box-shadow: rgba(25, 40, 93, 0.15) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px, rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px inset;
 }
 
 .article-titles {
@@ -44,6 +111,7 @@ li img {
   background-image: url("../../public/gif/clearNight4.gif");
   background-repeat: space;
   background-size: cover;
+  background-position: 40%;
 }
 
 .daysLight8 {
@@ -52,6 +120,13 @@ li img {
   background-repeat: space;
   background-size: cover;
 }
+
+/* .daysNight16 {
+  background-image: url("../../public/gif/clearNight4.gif");
+  background-repeat: space;
+  background-size: cover;
+  background-position: 69%;
+} */
 
 .daysNight16 {
   background-image: url("../../public/gif/clearNight3.gif");

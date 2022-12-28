@@ -34,13 +34,21 @@ header {
 
 .current-weather {
   margin-left: 1%;
-  width: 52%;
-  min-width: fit-content;
+  width: 51%;
   min-height: fit-content;
-  /* max-height: 350px; */
+  /* height: 300px; */
+  /* max-height: 300px; */
   border-radius: 0.5em;
   padding: 15px;
   color: white;
+
+  overflow: hidden; /* yazıların border dışına taşma sorununu geçiçi olarak çözdük */
+  text-overflow: ellipsis; /* burada yazının devam ettiğini ve taşma olduğunu ifade etmemizi sağlayan text-overflow özelliğini kullanıyoruz. */
+
+  box-shadow: rgba(85, 103, 169, 0.15) 0px 50px 100px -20px,
+  rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+  rgba(10, 37, 64, 0.35) 0px -2px 6px 0px, rgba(0, 0, 0, 0.17) 0px 12px 13px,
+  rgba(0, 0, 0, 0.09) 0px -3px 5px inset;
 }
 
 
@@ -91,29 +99,29 @@ header {
 .headerInfo {
   white-space: nowrap;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif,
-  Helvetica, sans-serif;
+    Helvetica, sans-serif;
 }
 
 .headerInfo span {
   font-weight: 550;
 }
 
-.date-time-prop{
-margin-left: 30px;
+.date-time-prop {
+  margin-left: 30px;
 }
 
-nav{
-  background: rgba(118, 128, 144, 0.5);  /* sondaki 0.5 opacity değeri oluyor */
-  height:40px;
+nav {
+  background: rgba(118, 128, 144, 0.5); /* sondaki 0.5 opacity değeri oluyor */
+  height: 40px;
   color: #ffff;
 }
 
-.nav-border{
+.nav-border {
   justify-content: center;
   height: 40px;
 }
 
-.istanbul:hover{
+.istanbul:hover {
   color: rgb(87, 147, 236);
   cursor: pointer;
   background-color: rgb(83, 93, 100);
@@ -121,7 +129,7 @@ nav{
   font-weight: 550;
 }
 
-.ankara:hover{
+.ankara:hover {
   color: rgb(255, 211, 54);
   cursor: pointer;
   background-color: rgb(83, 93, 100);
@@ -129,7 +137,7 @@ nav{
   font-weight: 550;
 }
 
-.izmir:hover{
+.izmir:hover {
   color: rgb(79, 230, 90);
   cursor: pointer;
   background-color: rgb(83, 93, 100);
@@ -137,16 +145,17 @@ nav{
   font-weight: 550;
 }
 
-.nav-title{
+.nav-title {
   /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 0.9em;
 }
 
-.country-li{
+.country-city-max{
+  max-height: 75px;
   text-align: center;
 }
 
-
-
-
+.fs-4 {
+  font-size: calc(.975rem + .3vw)!important;
+}

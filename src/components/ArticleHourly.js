@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 // CSS
@@ -13,7 +13,7 @@ import ArticleDay5 from './articleComponents/ArticleDay5';
 
 function ArticleHourly({ lat, lon, item }) {
 
-    const [hourly, setHourly] = useState([])
+    const [hourly, setHourly] = useState([]);
 
 
     // Hourly Weather Data (Call 5 day / 3 hour forecast data)
@@ -27,8 +27,6 @@ function ArticleHourly({ lat, lon, item }) {
 
     }, [lat, lon, item]);
 
-    // console.log("hourly:",hourly.city.name)
-    // console.log("hourly item:", item)
 
     return (
         <article>
@@ -43,7 +41,7 @@ function ArticleHourly({ lat, lon, item }) {
                                 <ArticleDay4 hourly={hourly} />
                                 <ArticleDay5 hourly={hourly} />
                             </div>
-                            : null
+                            : <div className='d-flex col-3 mb-5'>Loading . . . (DAYS) </div>
                     }
                 </div>
             </div>

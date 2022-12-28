@@ -10,7 +10,7 @@ export default function GoogleMapContent({lat, lon}) {
         googleMapsApiKey: process.env.REACT_APP_MAP_KEY,
     });
 
-    if (!isLoaded) return <div>Loading...</div>;
+    if (!isLoaded) return <div className='text-warning'>Loading . . . (MAPS) </div>;
     return <MapDetail lat={lat} lon={lon} />;
 };
 

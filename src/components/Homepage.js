@@ -20,8 +20,6 @@ function Homepage() {
             .then(res => {
                 setLat((res.data[0].lat))
                 setLon((res.data[0].lon));
-                console.log("lat :",lat)
-                console.log("lon :",lon)
             }).catch(err => {
                 console.log("error", err);
             })
@@ -34,7 +32,7 @@ function Homepage() {
             <Section lat={lat} lon={lon} item={item} setDateTime={setDateTime} />
             <ArticleHourly lat={lat} lon={lon} item={item}/>
         </div>
-    )
+    );
 };
 
 export default Homepage;

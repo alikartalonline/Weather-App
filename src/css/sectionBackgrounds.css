@@ -35,6 +35,12 @@
   background-repeat: round;
 }
 
+.random{
+  background-image: url("../../public/gif/random.gif");
+  background-repeat: no-repeat;
+  background-repeat: round;
+}
+
 .fewClouds {
   background-image: url("../../public/gif/FewClouds.gif");
   background-repeat: no-repeat;
@@ -118,5 +124,6 @@
   background-repeat: no-repeat;
   background-repeat: round;
 }
+
 
 

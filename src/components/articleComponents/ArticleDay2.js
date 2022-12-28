@@ -1,15 +1,14 @@
-import React from 'react'
+import React from 'react';
 
 function ArticleDay2({ hourly }) {
 
     const options = { weekday: 'long' };
     const options2 = { year: 'numeric', month: 'numeric', day: 'numeric' };
 
-
     return (
         <div className={
-            ((new Date(hourly.list[8].dt_txt).getUTCHours() >= 8 && new Date(hourly.list[8].dt_txt).getUTCHours() <= 18)) ? 
-            "day1 col-2 daysLight8 ms-3" : 'day1 col-2 daysNight8 ms-3'
+            ((new Date(hourly.list[10].dt_txt).getUTCHours() >= 8 && new Date(hourly.list[10].dt_txt).getUTCHours() <= 18)) ? 
+            "day2 col-2 daysLight8 ms-3" : 'day1 col-2 daysNight8 ms-3'
         }>
 
             <div className='article-titles'>
