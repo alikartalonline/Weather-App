@@ -4,6 +4,29 @@ function ArticleDay5({ hourly }) {
     const options = { weekday: 'long' };
     const options2 = { year: 'numeric', month: 'numeric', day: 'numeric' };
 
+    const dayIcon = (x) => {
+        return `${
+            hourly.list[x].weather[0].icon === "01d" ? "/gif/clearskyicon.gif" :
+            hourly.list[x].weather[0].icon === "01n" ? "/gif/clearskyicon.gif" : 
+            hourly.list[x].weather[0].icon === "02d" ? "/gif/fewcloudsicon.gif" :
+            hourly.list[x].weather[0].icon === "02n" ? "/gif/brokencloudsicon.gif" :
+            hourly.list[x].weather[0].icon === "03d" ? "/gif/brokencloudsicon.gif" :
+            hourly.list[x].weather[0].icon === "03n" ? "/gif/scatteredcloudsicon.gif" :
+            hourly.list[x].weather[0].icon === "04n" ? "/gif/brokencloudsicon.gif" :
+            hourly.list[x].weather[0].icon === "04n" ? "/gif/scatteredcloudsicon.gif" :
+            hourly.list[x].weather[0].icon === "09d" ? "/gif/rainicon.gif" :
+            hourly.list[x].weather[0].icon === "09n" ? "/gif/showerrainicon.gif" :
+            hourly.list[x].weather[0].icon === "10d" ? "/gif/rainicon.gif" :
+            hourly.list[x].weather[0].icon === "10n" ? "/gif/showerrainicon.gif" :
+            hourly.list[x].weather[0].icon === "11d" ? "/gif/drizzleicon.gif" :
+            hourly.list[x].weather[0].icon === "11n" ? "/gif/drizzleicon.gif" :
+            hourly.list[x].weather[0].icon === "13d" ? "/gif/snowicon.gif" :
+            hourly.list[x].weather[0].icon === "13n" ? "/gif/snowicon.gif" :
+            hourly.list[x].weather[0].icon === "50d" ? "/gif/misticon.gif" :
+            hourly.list[x].weather[0].icon === "50n" ? "/gif/misticon.gif" :
+            "/gif/clearskyicon.gif"
+        }`
+    };
 
     return (
         <div className={
@@ -34,28 +57,7 @@ function ArticleDay5({ hourly }) {
                         new Date(hourly.list[32].dt_txt).getUTCHours() > 9 ?
                             new Date(hourly.list[32].dt_txt).getUTCHours() : "0" + new Date(hourly.list[32].dt_txt).getUTCHours()
                     } : 00 <span><img 
-                    src={
-                        hourly.list[32].weather[0].icon === "01d" ? "/gif/clearskyicon.gif" :
-                        hourly.list[32].weather[0].icon === "01n" ? "/gif/clearskyicon.gif" : 
-                        hourly.list[32].weather[0].icon === "02d" ? "/gif/fewcloudsicon.gif" :
-                        hourly.list[32].weather[0].icon === "02n" ? "/gif/brokencloudsicon.gif" :
-                        hourly.list[32].weather[0].icon === "03d" ? "/gif/brokencloudsicon.gif" :
-                        hourly.list[32].weather[0].icon === "03n" ? "/gif/scatteredcloudsicon.gif" :
-                        hourly.list[32].weather[0].icon === "04n" ? "/gif/brokencloudsicon.gif" :
-                        hourly.list[32].weather[0].icon === "04n" ? "/gif/scatteredcloudsicon.gif" :
-                        hourly.list[32].weather[0].icon === "09d" ? "/gif/rainicon.gif" :
-                        hourly.list[32].weather[0].icon === "09n" ? "/gif/showerrainicon.gif" :
-                        hourly.list[32].weather[0].icon === "10d" ? "/gif/rainicon.gif" :
-                        hourly.list[32].weather[0].icon === "10n" ? "/gif/showerrainicon.gif" :
-                        hourly.list[32].weather[0].icon === "11d" ? "/gif/drizzleicon.gif" :
-                        hourly.list[32].weather[0].icon === "11n" ? "/gif/drizzleicon.gif" :
-                        hourly.list[32].weather[0].icon === "13d" ? "/gif/snowicon.gif" :
-                        hourly.list[32].weather[0].icon === "13n" ? "/gif/snowicon.gif" :
-                        hourly.list[32].weather[0].icon === "50d" ? "/gif/misticon.gif" :
-                        hourly.list[32].weather[0].icon === "50n" ? "/gif/misticon.gif" :
-                        "/gif/clearskyicon.gif"
-                    } 
-                    alt="WAppIcon" height={40}/></span>
+                    src={dayIcon(32)} alt="WAppIcon" height={40}/></span>
                     <span className='days-temp'>{hourly.list[32].main.temp}°C</span>
                 </li>
 
@@ -64,28 +66,7 @@ function ArticleDay5({ hourly }) {
                         new Date(hourly.list[33].dt_txt).getUTCHours() > 9 ?
                             new Date(hourly.list[33].dt_txt).getUTCHours() : "0" + new Date(hourly.list[33].dt_txt).getUTCHours()
                     } : 00 <span><img 
-                    src={
-                        hourly.list[33].weather[0].icon === "01d" ? "/gif/clearskyicon.gif" :
-                        hourly.list[33].weather[0].icon === "01n" ? "/gif/clearskyicon.gif" : 
-                        hourly.list[33].weather[0].icon === "02d" ? "/gif/fewcloudsicon.gif" :
-                        hourly.list[33].weather[0].icon === "02n" ? "/gif/brokencloudsicon.gif" :
-                        hourly.list[33].weather[0].icon === "03d" ? "/gif/brokencloudsicon.gif" :
-                        hourly.list[33].weather[0].icon === "03n" ? "/gif/scatteredcloudsicon.gif" :
-                        hourly.list[33].weather[0].icon === "04n" ? "/gif/brokencloudsicon.gif" :
-                        hourly.list[33].weather[0].icon === "04n" ? "/gif/scatteredcloudsicon.gif" :
-                        hourly.list[33].weather[0].icon === "09d" ? "/gif/rainicon.gif" :
-                        hourly.list[33].weather[0].icon === "09n" ? "/gif/showerrainicon.gif" :
-                        hourly.list[33].weather[0].icon === "10d" ? "/gif/rainicon.gif" :
-                        hourly.list[33].weather[0].icon === "10n" ? "/gif/showerrainicon.gif" :
-                        hourly.list[33].weather[0].icon === "11d" ? "/gif/drizzleicon.gif" :
-                        hourly.list[33].weather[0].icon === "11n" ? "/gif/drizzleicon.gif" :
-                        hourly.list[33].weather[0].icon === "13d" ? "/gif/snowicon.gif" :
-                        hourly.list[33].weather[0].icon === "13n" ? "/gif/snowicon.gif" :
-                        hourly.list[33].weather[0].icon === "50d" ? "/gif/misticon.gif" :
-                        hourly.list[33].weather[0].icon === "50n" ? "/gif/misticon.gif" :
-                        "/gif/clearskyicon.gif"
-                    } 
-                    alt="WAppIcon"  height={40}/></span>
+                    src={dayIcon(33)} alt="WAppIcon"  height={40}/></span>
                     <span className='days-temp'>{hourly.list[33].main.temp}°C</span>
                 </li>
 
@@ -94,28 +75,7 @@ function ArticleDay5({ hourly }) {
                         new Date(hourly.list[34].dt_txt).getUTCHours() > 9 ?
                             new Date(hourly.list[34].dt_txt).getUTCHours() : "0" + new Date(hourly.list[34].dt_txt).getUTCHours()
                     } : 00 <span><img 
-                    src={
-                        hourly.list[34].weather[0].icon === "01d" ? "/gif/clearskyicon.gif" :
-                        hourly.list[34].weather[0].icon === "01n" ? "/gif/clearskyicon.gif" : 
-                        hourly.list[34].weather[0].icon === "02d" ? "/gif/fewcloudsicon.gif" :
-                        hourly.list[34].weather[0].icon === "02n" ? "/gif/brokencloudsicon.gif" :
-                        hourly.list[34].weather[0].icon === "03d" ? "/gif/brokencloudsicon.gif" :
-                        hourly.list[34].weather[0].icon === "03n" ? "/gif/scatteredcloudsicon.gif" :
-                        hourly.list[34].weather[0].icon === "04n" ? "/gif/brokencloudsicon.gif" :
-                        hourly.list[34].weather[0].icon === "04n" ? "/gif/scatteredcloudsicon.gif" :
-                        hourly.list[34].weather[0].icon === "09d" ? "/gif/rainicon.gif" :
-                        hourly.list[34].weather[0].icon === "09n" ? "/gif/showerrainicon.gif" :
-                        hourly.list[34].weather[0].icon === "10d" ? "/gif/rainicon.gif" :
-                        hourly.list[34].weather[0].icon === "10n" ? "/gif/showerrainicon.gif" :
-                        hourly.list[34].weather[0].icon === "11d" ? "/gif/drizzleicon.gif" :
-                        hourly.list[34].weather[0].icon === "11n" ? "/gif/drizzleicon.gif" :
-                        hourly.list[34].weather[0].icon === "13d" ? "/gif/snowicon.gif" :
-                        hourly.list[34].weather[0].icon === "13n" ? "/gif/snowicon.gif" :
-                        hourly.list[34].weather[0].icon === "50d" ? "/gif/misticon.gif" :
-                        hourly.list[34].weather[0].icon === "50n" ? "/gif/misticon.gif" :
-                        "/gif/clearskyicon.gif"
-                    } 
-                    alt="WAppIcon"  height={40}/></span>
+                    src={dayIcon(34)} alt="WAppIcon"  height={40}/></span>
                     <span className='days-temp'>{hourly.list[34].main.temp}°C</span>
                 </li>
 
@@ -124,28 +84,7 @@ function ArticleDay5({ hourly }) {
                         new Date(hourly.list[35].dt_txt).getUTCHours() > 9 ?
                             new Date(hourly.list[35].dt_txt).getUTCHours() : "0" + new Date(hourly.list[35].dt_txt).getUTCHours()
                     } : 00 <span><img 
-                    src={
-                        hourly.list[35].weather[0].icon === "01d" ? "/gif/clearskyicon.gif" :
-                        hourly.list[35].weather[0].icon === "01n" ? "/gif/clearskyicon.gif" : 
-                        hourly.list[35].weather[0].icon === "02d" ? "/gif/fewcloudsicon.gif" :
-                        hourly.list[35].weather[0].icon === "02n" ? "/gif/brokencloudsicon.gif" :
-                        hourly.list[35].weather[0].icon === "03d" ? "/gif/brokencloudsicon.gif" :
-                        hourly.list[35].weather[0].icon === "03n" ? "/gif/scatteredcloudsicon.gif" :
-                        hourly.list[35].weather[0].icon === "04n" ? "/gif/brokencloudsicon.gif" :
-                        hourly.list[35].weather[0].icon === "04n" ? "/gif/scatteredcloudsicon.gif" :
-                        hourly.list[35].weather[0].icon === "09d" ? "/gif/rainicon.gif" :
-                        hourly.list[35].weather[0].icon === "09n" ? "/gif/showerrainicon.gif" :
-                        hourly.list[35].weather[0].icon === "10d" ? "/gif/rainicon.gif" :
-                        hourly.list[35].weather[0].icon === "10n" ? "/gif/showerrainicon.gif" :
-                        hourly.list[35].weather[0].icon === "11d" ? "/gif/drizzleicon.gif" :
-                        hourly.list[35].weather[0].icon === "11n" ? "/gif/drizzleicon.gif" :
-                        hourly.list[35].weather[0].icon === "13d" ? "/gif/snowicon.gif" :
-                        hourly.list[35].weather[0].icon === "13n" ? "/gif/snowicon.gif" :
-                        hourly.list[35].weather[0].icon === "50d" ? "/gif/misticon.gif" :
-                        hourly.list[35].weather[0].icon === "50n" ? "/gif/misticon.gif" :
-                        "/gif/clearskyicon.gif"
-                    } 
-                    alt="WAppIcon"  height={40}/></span>
+                    src={dayIcon(35)} alt="WAppIcon"  height={40}/></span>
                     <span className='days-temp'>{hourly.list[35].main.temp}°C</span>
                 </li>
 
@@ -155,28 +94,7 @@ function ArticleDay5({ hourly }) {
                         new Date(hourly.list[36].dt_txt).getUTCHours() > 9 ?
                             new Date(hourly.list[36].dt_txt).getUTCHours() : "0" + new Date(hourly.list[36].dt_txt).getUTCHours()
                     } : 00 <span><img 
-                    src={
-                        hourly.list[36].weather[0].icon === "01d" ? "/gif/clearskyicon.gif" :
-                        hourly.list[36].weather[0].icon === "01n" ? "/gif/clearskyicon.gif" : 
-                        hourly.list[36].weather[0].icon === "02d" ? "/gif/fewcloudsicon.gif" :
-                        hourly.list[36].weather[0].icon === "02n" ? "/gif/brokencloudsicon.gif" :
-                        hourly.list[36].weather[0].icon === "03d" ? "/gif/brokencloudsicon.gif" :
-                        hourly.list[36].weather[0].icon === "03n" ? "/gif/scatteredcloudsicon.gif" :
-                        hourly.list[36].weather[0].icon === "04n" ? "/gif/brokencloudsicon.gif" :
-                        hourly.list[36].weather[0].icon === "04n" ? "/gif/scatteredcloudsicon.gif" :
-                        hourly.list[36].weather[0].icon === "09d" ? "/gif/rainicon.gif" :
-                        hourly.list[36].weather[0].icon === "09n" ? "/gif/showerrainicon.gif" :
-                        hourly.list[36].weather[0].icon === "10d" ? "/gif/rainicon.gif" :
-                        hourly.list[36].weather[0].icon === "10n" ? "/gif/showerrainicon.gif" :
-                        hourly.list[36].weather[0].icon === "11d" ? "/gif/drizzleicon.gif" :
-                        hourly.list[36].weather[0].icon === "11n" ? "/gif/drizzleicon.gif" :
-                        hourly.list[36].weather[0].icon === "13d" ? "/gif/snowicon.gif" :
-                        hourly.list[36].weather[0].icon === "13n" ? "/gif/snowicon.gif" :
-                        hourly.list[36].weather[0].icon === "50d" ? "/gif/misticon.gif" :
-                        hourly.list[36].weather[0].icon === "50n" ? "/gif/misticon.gif" :
-                        "/gif/clearskyicon.gif"
-                    } 
-                    alt="WAppIcon"  height={40}/></span>
+                    src={dayIcon(36)} alt="WAppIcon"  height={40}/></span>
                     <span className='days-temp'>{hourly.list[36].main.temp}°C</span>
                 </li>
 
@@ -186,28 +104,7 @@ function ArticleDay5({ hourly }) {
                         new Date(hourly.list[37].dt_txt).getUTCHours() > 9 ?
                             new Date(hourly.list[37].dt_txt).getUTCHours() : "0" + new Date(hourly.list[37].dt_txt).getUTCHours()
                     } : 00 <span><img 
-                    src={
-                        hourly.list[37].weather[0].icon === "01d" ? "/gif/clearskyicon.gif" :
-                        hourly.list[37].weather[0].icon === "01n" ? "/gif/clearskyicon.gif" : 
-                        hourly.list[37].weather[0].icon === "02d" ? "/gif/fewcloudsicon.gif" :
-                        hourly.list[37].weather[0].icon === "02n" ? "/gif/brokencloudsicon.gif" :
-                        hourly.list[37].weather[0].icon === "03d" ? "/gif/brokencloudsicon.gif" :
-                        hourly.list[37].weather[0].icon === "03n" ? "/gif/scatteredcloudsicon.gif" :
-                        hourly.list[37].weather[0].icon === "04n" ? "/gif/brokencloudsicon.gif" :
-                        hourly.list[37].weather[0].icon === "04n" ? "/gif/scatteredcloudsicon.gif" :
-                        hourly.list[37].weather[0].icon === "09d" ? "/gif/rainicon.gif" :
-                        hourly.list[37].weather[0].icon === "09n" ? "/gif/showerrainicon.gif" :
-                        hourly.list[37].weather[0].icon === "10d" ? "/gif/rainicon.gif" :
-                        hourly.list[37].weather[0].icon === "10n" ? "/gif/showerrainicon.gif" :
-                        hourly.list[37].weather[0].icon === "11d" ? "/gif/drizzleicon.gif" :
-                        hourly.list[37].weather[0].icon === "11n" ? "/gif/drizzleicon.gif" :
-                        hourly.list[37].weather[0].icon === "13d" ? "/gif/snowicon.gif" :
-                        hourly.list[37].weather[0].icon === "13n" ? "/gif/snowicon.gif" :
-                        hourly.list[37].weather[0].icon === "50d" ? "/gif/misticon.gif" :
-                        hourly.list[37].weather[0].icon === "50n" ? "/gif/misticon.gif" :
-                        "/gif/clearskyicon.gif"
-                    } 
-                    alt="WAppIcon"  height={40}/></span>
+                    src={dayIcon(37)} alt="WAppIcon"  height={40}/></span>
                     <span className='days-temp'>{hourly.list[37].main.temp}°C</span>
                 </li>
 
@@ -217,28 +114,7 @@ function ArticleDay5({ hourly }) {
                         new Date(hourly.list[38].dt_txt).getUTCHours() > 9 ?
                             new Date(hourly.list[38].dt_txt).getUTCHours() : "0" + new Date(hourly.list[38].dt_txt).getUTCHours()
                     } : 00 <span><img 
-                    src={
-                        hourly.list[38].weather[0].icon === "01d" ? "/gif/clearskyicon.gif" :
-                        hourly.list[38].weather[0].icon === "01n" ? "/gif/clearskyicon.gif" : 
-                        hourly.list[38].weather[0].icon === "02d" ? "/gif/fewcloudsicon.gif" :
-                        hourly.list[38].weather[0].icon === "02n" ? "/gif/brokencloudsicon.gif" :
-                        hourly.list[38].weather[0].icon === "03d" ? "/gif/brokencloudsicon.gif" :
-                        hourly.list[38].weather[0].icon === "03n" ? "/gif/scatteredcloudsicon.gif" :
-                        hourly.list[38].weather[0].icon === "04n" ? "/gif/brokencloudsicon.gif" :
-                        hourly.list[38].weather[0].icon === "04n" ? "/gif/scatteredcloudsicon.gif" :
-                        hourly.list[38].weather[0].icon === "09d" ? "/gif/rainicon.gif" :
-                        hourly.list[38].weather[0].icon === "09n" ? "/gif/showerrainicon.gif" :
-                        hourly.list[38].weather[0].icon === "10d" ? "/gif/rainicon.gif" :
-                        hourly.list[38].weather[0].icon === "10n" ? "/gif/showerrainicon.gif" :
-                        hourly.list[38].weather[0].icon === "11d" ? "/gif/drizzleicon.gif" :
-                        hourly.list[38].weather[0].icon === "11n" ? "/gif/drizzleicon.gif" :
-                        hourly.list[38].weather[0].icon === "13d" ? "/gif/snowicon.gif" :
-                        hourly.list[38].weather[0].icon === "13n" ? "/gif/snowicon.gif" :
-                        hourly.list[38].weather[0].icon === "50d" ? "/gif/misticon.gif" :
-                        hourly.list[38].weather[0].icon === "50n" ? "/gif/misticon.gif" :
-                        "/gif/clearskyicon.gif"
-                    } 
-                    alt="WAppIcon"  height={40}/></span>
+                    src={dayIcon(38)} alt="WAppIcon"  height={40}/></span>
                     <span className='days-temp'>{hourly.list[38].main.temp}°C</span>
                 </li>
 
@@ -247,28 +123,7 @@ function ArticleDay5({ hourly }) {
                         new Date(hourly.list[39].dt_txt).getUTCHours() > 9 ?
                             new Date(hourly.list[39].dt_txt).getUTCHours() : "0" + new Date(hourly.list[39].dt_txt).getUTCHours()
                     } : 00 <span><img 
-                    src={
-                        hourly.list[39].weather[0].icon === "01d" ? "/gif/clearskyicon.gif" :
-                        hourly.list[39].weather[0].icon === "01n" ? "/gif/clearskyicon.gif" : 
-                        hourly.list[39].weather[0].icon === "02d" ? "/gif/fewcloudsicon.gif" :
-                        hourly.list[39].weather[0].icon === "02n" ? "/gif/brokencloudsicon.gif" :
-                        hourly.list[39].weather[0].icon === "03d" ? "/gif/brokencloudsicon.gif" :
-                        hourly.list[39].weather[0].icon === "03n" ? "/gif/scatteredcloudsicon.gif" :
-                        hourly.list[39].weather[0].icon === "04n" ? "/gif/brokencloudsicon.gif" :
-                        hourly.list[39].weather[0].icon === "04n" ? "/gif/scatteredcloudsicon.gif" :
-                        hourly.list[39].weather[0].icon === "09d" ? "/gif/rainicon.gif" :
-                        hourly.list[39].weather[0].icon === "09n" ? "/gif/showerrainicon.gif" :
-                        hourly.list[39].weather[0].icon === "10d" ? "/gif/rainicon.gif" :
-                        hourly.list[39].weather[0].icon === "10n" ? "/gif/showerrainicon.gif" :
-                        hourly.list[39].weather[0].icon === "11d" ? "/gif/drizzleicon.gif" :
-                        hourly.list[39].weather[0].icon === "11n" ? "/gif/drizzleicon.gif" :
-                        hourly.list[39].weather[0].icon === "13d" ? "/gif/snowicon.gif" :
-                        hourly.list[39].weather[0].icon === "13n" ? "/gif/snowicon.gif" :
-                        hourly.list[39].weather[0].icon === "50d" ? "/gif/misticon.gif" :
-                        hourly.list[39].weather[0].icon === "50n" ? "/gif/misticon.gif" :
-                        "/gif/clearskyicon.gif"
-                    } 
-                    alt="WAppIcon"  height={40}/></span>
+                    src={dayIcon(39)} alt="WAppIcon"  height={40}/></span>
                     <span className='days-temp'>{hourly.list[39].main.temp}°C</span>
                 </li>
             </ul>
