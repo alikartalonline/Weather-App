@@ -1,7 +1,8 @@
 .day1 {
   padding: 1%;
   min-height: fit-content;
-  min-width: fit-content;
+  /* min-width: fit-content; */
+  min-width: 215px;
   border-radius: 0.5em;
   cursor: pointer;
 }
@@ -16,7 +17,8 @@
 .day2 {
   padding: 1%;
   min-height: fit-content;
-  min-width: fit-content;
+  /* min-width: fit-content; */
+  min-width: 215px;
   border-radius: 0.5em;
   cursor: pointer;
 }
@@ -31,7 +33,8 @@
 .day3 {
   padding: 1%;
   min-height: fit-content;
-  min-width: fit-content;
+  /* min-width: fit-content; */
+  min-width: 215px;
   border-radius: 0.5em;
   cursor: pointer;
 }
@@ -46,7 +49,8 @@
 .day4 {
   padding: 1%;
   min-height: fit-content;
-  min-width: fit-content;
+  /* min-width: fit-content; */
+  min-width: 215px;
   border-radius: 0.5em;
   cursor: pointer;
 }
@@ -61,7 +65,8 @@
 .day5 {
   padding: 1%;
   min-height: fit-content;
-  min-width: fit-content;
+  /* min-width: fit-content; */
+  min-width: 215px;
   border-radius: 0.5em;
   cursor: pointer;
 }
@@ -77,6 +82,7 @@
   text-align: center;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+    margin-top: 2%;
 }
 
 article ul li {

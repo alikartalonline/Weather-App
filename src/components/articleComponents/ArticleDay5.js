@@ -8,7 +8,7 @@ function ArticleDay5({ hourly }) {
     return (
         <div className={
             ((new Date(hourly.list[34].dt_txt).getUTCHours() >= 8 && new Date(hourly.list[34].dt_txt).getUTCHours() <= 18)) ? 
-            "day5 col-2 daysLight32 ms-3" : 'day1 col-2 daysNight32 ms-3'
+            "day5 col-2 daysLight32 ms-3" : 'day5 col-2 daysNight32 ms-3'
         }>
 
             <div className='article-titles'>
