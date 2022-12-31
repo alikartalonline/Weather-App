@@ -8,7 +8,6 @@ import Nav from './Nav';
 import ArticleHourly from './ArticleHourly';
 import ArticleMaps from './ArticleMaps';
 
-
 function Homepage() {
 
     const [lat, setLat] = useState(41.0091982); 

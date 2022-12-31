@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* white-space: nowrap; */
 
   background-color: #3e4b64;
 }
@@ -72,9 +73,9 @@ header {
   font-weight: 600;
 }
 
-.footer-words {
+/* .footer-words {
   white-space: nowrap;
-}
+} */
 
 .CWD {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -159,3 +160,30 @@ nav {
 .fs-4 {
   font-size: calc(.975rem + .3vw)!important;
 }
+
+.alikartalonline {
+  color: #ffff;
+  font-size: 15px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  letter-spacing: 0.1em;
+  margin-top: 40px;
+  white-space: nowrap;
+  /* margin-left: -50%; */
+}
+
+.alikartalonline a {
+  text-decoration: none;
+  color: black;
+}
+
+.alikartalonline a:hover {
+  text-decoration: none;
+  color: rgb(242, 249, 54);
+  font-size: 18px;
+  letter-spacing: 0.2em;
+
+}
+
+
+

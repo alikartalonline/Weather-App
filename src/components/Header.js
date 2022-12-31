@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
-function Header({ item, setItem, dateTime }) {
+// COMPONENTS
+import Alikartalonline from './Alikartalonline';
+
+function Header({ setItem, dateTime }) {
 
     const [form, setForm] = useState({ content: "" });
     const [clock, setClock] = useState();
@@ -42,9 +45,14 @@ function Header({ item, setItem, dateTime }) {
             <div className='container'>
                 <div className='row'>
 
+
+                    <div className='col-2'>
+                        <Alikartalonline />
+                    </div>
+
                     {/* FORM START */}
-                    <div className='col-11 d-flex justify-content-center '>
-                        <form onSubmit={handleSubmit} className="d-flex mt-3">
+                    <div className='col-9 d-flex justify-content-center '>
+                        <form onSubmit={handleSubmit} className="d-flex mt-3 me-5">
                             <div className='form-floating input-group' >
 
                                 <input
@@ -54,13 +62,13 @@ function Header({ item, setItem, dateTime }) {
                                     name='content'
                                     value={form.content}
                                     onChange={onChangeInput}
-                                    autoFocus 
+                                    autoFocus
                                 />
 
                                 <label htmlFor="floatingInput" className='text-primary'>Search</label>
 
                                 <button
-                                    className="btn btn-outline-dark searchLogoButton"
+                                    className="btn btn-outline-dark searchLogoButton "
                                     type='submit' value="submit"
                                 >
                                     {searchLogo}

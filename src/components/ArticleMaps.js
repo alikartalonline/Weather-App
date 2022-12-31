@@ -21,8 +21,6 @@ function ArticleMaps() {
     };
 
 
-    console.log("scroller:",scroller)
-
     return (
         <div className='container'>
             <div className='row'>
