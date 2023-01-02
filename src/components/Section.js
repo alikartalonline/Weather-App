@@ -42,14 +42,16 @@ function Section({ lat, lon, item,setDateTime }) {
             <div className='container mt-4'>
                 <div className='row'>
 
+<div className='col-sm-10 col-md-9 col-lg-8 col-xl-6 '>
+
                     {
                         current.name !== undefined ?
-
-                            <div className={
-                                ((current.weather[0].main === "Clear") && (dayNightState === true)) ? "current-weather clearSky col-8" || "current-weather nightclearSky col-8":  
-                                ((current.weather[0].main === "Clear") && (dayNightState === false)) ? "current-weather nightclearSky2 col-8" : 
-                                ((current.weather[0].main === "Clouds") && (dayNightState === true))  ? "current-weather scatteredClouds col-8" :
-                                ((current.weather[0].main === "Clouds") && (dayNightState === false))  ? "current-weather cloudsnightsky col-8" :  
+                        
+                        <div className={
+                            ((current.weather[0].main === "Clear") && (dayNightState === true)) ? "current-weather clearSky col-8" || "current-weather nightclearSky col-8":  
+                            ((current.weather[0].main === "Clear") && (dayNightState === false)) ? "current-weather nightclearSky2 col-8" : 
+                            ((current.weather[0].main === "Clouds") && (dayNightState === true))  ? "current-weather scatteredClouds col-8" :
+                            ((current.weather[0].main === "Clouds") && (dayNightState === false))  ? "current-weather cloudsnightsky col-8" :  
                                 ((current.weather[0].main === "Rain") && (dayNightState === true)) ? "current-weather rain col-8 " :
                                 ((current.weather[0].main === "Rain") && (dayNightState === false)) ? "current-weather nightRain col-8" :
                                 current.weather[0].main === "Fog" ? "current-weather mist2 col-8" :
@@ -185,8 +187,9 @@ function Section({ lat, lon, item,setDateTime }) {
                             </div>
                             : null
                     }
+    </div>
 
-                    <div className='col-4'>
+                    <div className='col-sm-2 col-md-3 col-lg-3 col-xl-4 '>
                         <GoogleMapContent lat={lat} lon={lon} />
                     </div>
 
