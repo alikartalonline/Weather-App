@@ -317,3 +317,7 @@ opacity: 0.8;
   outline: none;
 }
 
+.article-list li{
+  margin-right: 3%;
+}
+

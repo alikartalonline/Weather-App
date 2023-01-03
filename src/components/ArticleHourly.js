@@ -31,49 +31,18 @@ function ArticleHourly({ lat, lon, item }) {
     return (
         <article>
             <div className='container mt-4 text-white'>
-                {/* <div className='row'> */}
-
-                    {/* {
-                        hourly != "" ?
-                            <div className=' d-flex row mb-5'>
-
-                                <div className='col-2'>
-                                    <ArticleDay1 hourly={hourly} />
-                                </div>
-
-                                <div className='col-2'>
-                                    <ArticleDay2 hourly={hourly} />
-                                </div>
-
-                                <div className='col-2'>
-                                    <ArticleDay3 hourly={hourly} />
-                                </div>
-
-                                <div className='col-2'>
-                                    <ArticleDay4 hourly={hourly} />
-                                </div>
-
-                                <div className='col-2'>
-                                    <ArticleDay5 hourly={hourly} />
-                                </div>
-
-
-                            </div>
-                            : <div className='d-flex col-3 mb-5'>Loading . . . (DAYS) </div>
-                    } */}
 
                     {
                         hourly != "" ?
-                            <ul className='row mb-5'>
-                                <li className='col  mb-3'>< ArticleDay1 hourly={hourly} /></li>
-                                <li className='col  mb-3'>< ArticleDay2 hourly={hourly} /></li>
-                                <li className='col  mb-3'>< ArticleDay3 hourly={hourly} /></li>
-                                <li className='col  mb-3'>< ArticleDay4 hourly={hourly} /></li>
-                                <li className='col  mb-3'>< ArticleDay5 hourly={hourly} /></li>
+                            <ul className='row mb-5 article-list'>
+                                <li className='col-sm-7 col-md-4 col-lg-3 col-xl-3 me-4 mb-3' style={{marginLeft:"-3%"}}>< ArticleDay1 hourly={hourly} /></li>
+                                <li className='col-sm-7 col-md-4 col-lg-3 col-xl-3  mb-3'>< ArticleDay2 hourly={hourly} /></li>
+                                <li className='col-sm-7 col-md-4 col-lg-3 col-xl-3  mb-3'>< ArticleDay3 hourly={hourly} /></li>
+                                <li className='col-sm-7 col-md-4 col-lg-3 col-xl-3  mb-3'>< ArticleDay4 hourly={hourly} /></li>
+                                <li className='col-sm-7 col-md-4 col-lg-3 col-xl-3  mb-3'>< ArticleDay5 hourly={hourly} /></li>
                             </ul> : <div className='d-flex mb-5'>Loading . . . (DAYS) </div>
                     }
 
-                {/* </div> */}
             </div>
         </article>
     );
