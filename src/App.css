@@ -28,14 +28,18 @@ form {
 }
 
 header {
-  height: 80px;
+  min-height: 80px;
+  max-height: fit-content;
   background-color: #78d1f2;
   background-image: linear-gradient(45deg, #77c4e3 30%, #dfe160 90%);
+  overflow: hidden; 
+  text-overflow: ellipsis;
 }
 
 .current-weather {
   margin-left: 1%;
-  width: 51%;
+  width: 100%;
+  min-width: fit-content;
   min-height: fit-content;
   /* height: 300px; */
   /* max-height: 300px; */
@@ -73,9 +77,9 @@ header {
   font-weight: 600;
 }
 
-/* .footer-words {
+.footer-words {
   white-space: nowrap;
-} */
+}
 
 .CWD {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -185,5 +189,8 @@ nav {
 
 }
 
-
+/* section{
+  background-color: red;
+  height: 900px;
+} */
 
