@@ -3,8 +3,7 @@
 
 ### Weather App v3 (Responsive) : [Click to View](https://alikartalonline-wapp.netlify.app/)
 
-### Daytime  
-<img src="" alt="alikartalonlineWp" title="alikartalonlineWp">
+<img src="https://github.com/alikartalonline/Weather-App/blob/main/public/Result_Gif/alikartalonline-wapp-responsive.gif" alt="alikartalonlineWp" title="alikartalonlineWp">
 
 
 <br>
