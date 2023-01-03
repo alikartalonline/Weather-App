@@ -1,5 +1,12 @@
 # Weather-App
 
+
+### Weather App v3 (Responsive) : ![70%](https://progress-bar.dev/70)
+
+<br>
+<hr>
+<br>
+
 ### Weather App v2: [Click to View](https://alikartalonline-wapp.netlify.app/)
 
 
