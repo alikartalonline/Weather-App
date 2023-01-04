@@ -21,6 +21,7 @@ function Homepage() {
             .then(res => {
                 setLat((res.data[0].lat))
                 setLon((res.data[0].lon));
+                document.title = `W.App: ${item.toUpperCase()}`
             }).catch(err => {
                 console.log("error", err);
             })
