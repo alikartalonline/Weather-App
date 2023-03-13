@@ -319,5 +319,9 @@ opacity: 0.8;
 
 .article-list li{
   margin-right: 3%;
+  /* min-width: 220px; */
 }
 
+.li1{
+  /* margin-right: 5%; */
+}
