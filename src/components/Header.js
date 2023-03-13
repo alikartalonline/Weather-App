@@ -46,12 +46,12 @@ function Header({ setItem, dateTime }) {
                 <div className='row'>
 
 
-                    <div className='col-sm-6 col-md-1 col-lg-1 col-xl-2 order-3 order-md-1 '>
+                    <div className='col-7 ms-auto me-auto col-sm-6 col-md-1 col-lg-1 col-xl-2 order-3 order-md-1 '>
                         <Alikartalonline />
                     </div>
 
                     {/* FORM START */}
-                    <div className='col-sm-12 col-md-9 col-lg-8 col-xl-8 order-1 order-md-2    d-flex justify-content-center '>
+                    <div className='col-12 col-sm-12 col-md-7 ms-md-auto col-lg-7  col-xl-8 order-1 order-md-2    d-flex justify-content-center '>
                         <form onSubmit={handleSubmit} className="d-flex mt-3">
                             <div className='form-floating input-group' >
 
@@ -81,7 +81,7 @@ function Header({ setItem, dateTime }) {
 
 
                     {/* DATE - CLOCK START  */}
-                    <div className='col-sm-6 col-md-2 col-lg-3 col-xl-2 order-2 order-md-3  mt-2 headerInfo d-flex'>
+                    <div className='col-6 ms-auto me-auto col-sm-6 col-md-3 col-lg-3 col-xl-2 order-2 order-md-3  mt-2 headerInfo d-flex'>
                         <div>
                             <span className='ms-5'>{dateTimeProp}</span> <br />
                             <span>TR:</span> {clock} <span className='text-danger'>/</span>

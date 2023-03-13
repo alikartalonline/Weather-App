@@ -47,7 +47,7 @@ function Nav() {
 
                     {/* ISTANBUL */}
                     {istanbul !== "" ?
-                        <div className='col d-flex  nav-border border-end border-start istanbul'>
+                        <div className='col-4 col-sm d-flex  nav-border border-end border-start istanbul'>
                             <span className=' d-flex mt-1'>
                                 <span className='nav-title mt-1'>
                                     {istanbul.name === "Karaköy" ? "Istanbul" : istanbul.name}</span>
@@ -64,7 +64,7 @@ function Nav() {
 
                     {/* ANKARA */}
                     {ankara !== "" ?
-                        <div className='col d-flex  nav-border border-end border-start ankara'>
+                        <div className='col-4 col-sm d-flex  nav-border border-end border-start ankara'>
                             <span className='d-flex mt-1'>
                                 <span className='nav-title mt-1'>
                                     {ankara.name}
@@ -82,7 +82,7 @@ function Nav() {
 
                     {/* IZMIR */}
                     {izmir !== "" ?
-                        <div className='col d-flex  nav-border border-end border-start izmir'>
+                        <div className='col-4 col-sm d-flex  nav-border border-end border-start izmir'>
                             <span className='mt-1 d-flex'>
                                 <span className='nav-title mt-1'>
                                     {izmir.name}

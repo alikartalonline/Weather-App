@@ -172,7 +172,8 @@ function Section({ lat, lon, item,setDateTime }) {
 
                                 </div>
 
-                                <ul className='d-flex'>
+                                {/* <ul className='d-flex'> */}
+                                <ul className='current-weather-footer-list'>
 
                                     <li style={{ marginLeft: "-5%" }}>WIND <span className='footer-words'>
                                         {current.wind.speed.toFixed()} km/s

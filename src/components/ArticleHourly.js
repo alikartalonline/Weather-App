@@ -32,16 +32,30 @@ function ArticleHourly({ lat, lon, item }) {
         <article>
             <div className='container mt-4 text-white'>
 
-                    {
-                        hourly != "" ?
-                            <ul className='row mb-5 article-list'>
-                                <li className='col-sm-7 col-md-4 col-lg-3 col-xl-3 me-4 mb-3' style={{marginLeft:"-3%"}}>< ArticleDay1 hourly={hourly} /></li>
-                                <li className='col-sm-7 col-md-4 col-lg-3 col-xl-3  mb-3'>< ArticleDay2 hourly={hourly} /></li>
-                                <li className='col-sm-7 col-md-4 col-lg-3 col-xl-3  mb-3'>< ArticleDay3 hourly={hourly} /></li>
-                                <li className='col-sm-7 col-md-4 col-lg-3 col-xl-3  mb-3'>< ArticleDay4 hourly={hourly} /></li>
-                                <li className='col-sm-7 col-md-4 col-lg-3 col-xl-3  mb-3'>< ArticleDay5 hourly={hourly} /></li>
-                            </ul> : <div className='d-flex mb-5'>Loading . . . (DAYS) </div>
-                    }
+                {
+                    hourly != "" ?
+                        <ul className='row mb-5 article-list'>
+
+                            <li
+                                className='col-5 me-auto col-sm-5  col-md-3 col-lg-2  col-xl-2 col-xxl-1 me-xxl-auto  me-4 mb-3'
+                                style={{ marginLeft: "-5%" }}
+                            >< ArticleDay1 hourly={hourly} /></li>
+
+                            <li
+                                className='col-5 ms-auto me-auto col-sm-6 ms-sm-auto me-sm-auto  col-md-3 col-lg-2 ms-lg-auto col-xl-2 ms-xl-auto  col-xxl-1  mb-3'>< ArticleDay2 hourly={hourly} /></li>
+
+                            <li
+                                className='col-5 me-auto col-sm-6  ms-md-auto col-md-4 col-lg-2 ms-lg-auto col-xl-2 ms-xl-auto col-xxl-1 me-xxl-auto mb-3'>< ArticleDay3 hourly={hourly} /></li>
+
+                            <li
+                                className='col-5 me-auto ms-auto  col-sm-6 ms-sm-auto me-sm-auto col-md-5 me-md-auto ms-md-auto  col-lg-2 ms-lg-auto col-xl-2  ms-xl-auto col-xxl-1 mb-3'>< ArticleDay4 hourly={hourly} /></li>
+
+                            <li
+                                className=' col-sm-4 col-md-6 me-md-auto  col-lg-2 ms-lg-auto col-xl-2 ms-xl-auto col-xxl-3 mb-3'>< ArticleDay5 hourly={hourly} /></li>
+
+                        </ul>
+                        : <div className='d-flex mb-5'>Loading . . . (DAYS) </div>
+                }
 
             </div>
         </article>
