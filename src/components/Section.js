@@ -42,7 +42,7 @@ function Section({ lat, lon, item,setDateTime }) {
             <div className='container mt-4'>
                 <div className='row'>
 
-                <div className='col-sm-9 col-md-8 col-lg-8 col-xl-6 '>
+                <div className='col-sm-9 col-md-8 col-lg-8 col-xl-7 col-xxl-6 '>
                     {
                         current.name !== undefined ?
                         
@@ -189,7 +189,7 @@ function Section({ lat, lon, item,setDateTime }) {
                     }
                 </div>
 
-                    <div className='col-sm-2 col-md-3 col-lg-3 col-xl-4 ms-4'>
+                    <div className='col-sm-2 col-md-3 col-lg-3 col-xl-4 col-xxl-4 ms-4'>
                         <GoogleMapContent lat={lat} lon={lon} />
                     </div>
 
